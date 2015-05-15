@@ -1,0 +1,5140 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Creator: rendereps (using OpenGL feedback)
+%%BoundingBox: 0 0 600 600
+%%EndComments
+
+gsave
+
+% the gouraudtriangle PostScript fragment below is free
+% written by Frederic Delhoume (delhoume@ilog.fr)
+/threshold 0.1 def
+/bd{bind def}bind def /triangle { aload pop   setrgbcolor  aload pop 5 3
+roll 4 2 roll 3 2 roll exch moveto lineto lineto closepath fill } bd
+/computediff1 { 2 copy sub abs threshold ge {pop pop pop true} { exch 2
+index sub abs threshold ge { pop pop true} { sub abs threshold ge } ifelse
+} ifelse } bd /computediff3 { 3 copy 0 get 3 1 roll 0 get 3 1 roll 0 get
+computediff1 {true} { 3 copy 1 get 3 1 roll 1 get 3 1 roll 1 get
+computediff1 {true} { 3 copy 2 get 3 1 roll  2 get 3 1 roll 2 get
+computediff1 } ifelse } ifelse } bd /middlecolor { aload pop 4 -1 roll
+aload pop 4 -1 roll add 2 div 5 1 roll 3 -1 roll add 2 div 3 1 roll add 2
+div 3 1 roll exch 3 array astore } bd /gouraudtriangle { computediff3 { 4
+-1 roll aload 7 1 roll 6 -1 roll pop 3 -1 roll pop add 2 div 3 1 roll add
+2 div exch 3 -1 roll aload 7 1 roll exch pop 4 -1 roll pop add 2 div 3 1
+roll add 2 div exch 3 -1 roll aload 7 1 roll pop 3 -1 roll pop add 2 div 3
+1 roll add 2 div exch 7 3 roll 10 -3 roll dup 3 index middlecolor 4 1 roll
+2 copy middlecolor 4 1 roll 3 copy pop middlecolor 4 1 roll 13 -1 roll
+aload pop 17 index 6 index 15 index 19 index 6 index 17 index 6 array
+astore 10 index 10 index 14 index gouraudtriangle 17 index 5 index 17
+index 19 index 5 index 19 index 6 array astore 10 index 9 index 13 index
+gouraudtriangle 13 index 16 index 5 index 15 index 18 index 5 index 6
+array astore 12 index 12 index 9 index gouraudtriangle 17 index 16 index
+15 index 19 index 18 index 17 index 6 array astore 10 index 12 index 14
+index gouraudtriangle 18 {pop} repeat } { aload pop 5 3 roll aload pop 7 3
+roll aload pop 9 3 roll 4 index 6 index 4 index add add 3 div 10 1 roll 7
+index 5 index 3 index add add 3 div 10 1 roll 6 index 4 index 2 index add
+add 3 div 10 1 roll 9 {pop} repeat 3 array astore triangle } ifelse } bd
+
+1 setlinewidth
+0 0 0 setrgbcolor
+0 0 600 600 rectfill
+
+1 1 1 setrgbcolor
+0 137.786 moveto
+0 166.922 lineto stroke
+1 1 1 setrgbcolor
+0 166.922 moveto
+0 575.423 lineto stroke
+1 1 1 setrgbcolor
+423.136 600 moveto
+486.413 600 lineto stroke
+1 1 1 setrgbcolor
+102.625 600 moveto
+423.136 600 lineto stroke
+1 1 1 setrgbcolor
+0 546.287 moveto
+0 137.786 lineto stroke
+newpath
+0.4 0.4 0 setrgbcolor
+386.32 324.475 moveto
+401.242 324.246 lineto
+386.32 324.475 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+389.058 313.751 moveto
+401.242 324.246 lineto
+389.058 313.751 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+384.599 335.184 moveto
+401.242 324.246 lineto
+384.599 335.184 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+392.627 303.742 moveto
+401.242 324.246 lineto
+392.627 303.742 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+384.012 345.148 moveto
+401.242 324.246 lineto
+384.012 345.148 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+396.783 295.13 moveto
+401.242 324.246 lineto
+396.783 295.13 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+363.828 319.089 moveto
+366.566 308.364 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+362.107 329.798 moveto
+363.828 319.089 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+384.599 353.687 moveto
+401.242 324.246 lineto
+384.599 353.687 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+366.566 308.364 moveto
+370.135 298.355 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+401.242 288.502 moveto
+401.242 324.246 lineto
+401.242 288.502 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+361.519 339.761 moveto
+362.107 329.798 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+370.135 298.355 moveto
+374.29 289.743 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+363.744 318.525 moveto
+376.534 318.329 lineto
+363.744 318.525 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+366.091 309.333 moveto
+376.534 318.329 lineto
+366.091 309.333 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+362.268 327.704 moveto
+376.534 318.329 lineto
+362.268 327.704 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+369.15 300.754 moveto
+376.534 318.329 lineto
+369.15 300.754 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+386.32 360.219 moveto
+401.242 324.246 lineto
+386.32 360.219 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+362.107 348.3 moveto
+361.519 339.761 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+361.765 336.244 moveto
+376.534 318.329 lineto
+361.765 336.244 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+374.29 289.743 moveto
+378.75 283.116 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+405.702 284.31 moveto
+401.242 324.246 lineto
+405.702 284.31 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+372.712 293.372 moveto
+376.534 318.329 lineto
+372.712 293.372 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+363.828 354.833 moveto
+362.107 348.3 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+362.268 343.564 moveto
+376.534 318.329 lineto
+362.268 343.564 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+341.473 313.192 moveto
+343.82 304 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+363.828 319.089 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+366.566 308.364 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+389.058 364.3 moveto
+401.242 324.246 lineto
+389.058 364.3 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+339.998 322.371 moveto
+341.473 313.192 lineto
+354.264 312.995 lineto
+closepath fill
+
+1 1 1 setrgbcolor
+600 53.713 moveto
+600 24.5773 lineto stroke
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+362.107 329.798 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+343.82 304 moveto
+346.879 295.42 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+376.534 287.691 moveto
+376.534 318.329 lineto
+376.534 287.691 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 283.116 moveto
+383.21 278.924 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+370.135 298.355 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+361.519 339.761 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+339.494 330.911 moveto
+339.998 322.371 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+409.858 282.84 moveto
+401.242 324.246 lineto
+409.858 282.84 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+374.29 289.743 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+346.879 295.42 moveto
+350.441 288.039 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+340.963 312.635 moveto
+352.048 312.465 lineto
+340.963 312.635 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+342.997 304.668 moveto
+352.048 312.465 lineto
+342.997 304.668 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+363.744 349.163 moveto
+376.534 318.329 lineto
+363.744 349.163 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+339.684 320.59 moveto
+352.048 312.465 lineto
+339.684 320.59 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+362.107 348.3 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+366.566 358.914 moveto
+363.828 354.833 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+345.648 297.233 moveto
+352.048 312.465 lineto
+345.648 297.233 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+378.75 283.116 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+339.998 338.23 moveto
+339.494 330.911 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+380.357 284.098 moveto
+376.534 318.329 lineto
+380.357 284.098 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+339.248 327.992 moveto
+352.048 312.465 lineto
+339.248 327.992 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+392.627 365.652 moveto
+401.242 324.246 lineto
+392.627 365.652 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+350.441 288.039 moveto
+354.264 282.358 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+383.21 278.924 moveto
+387.366 277.454 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+363.828 354.833 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+348.735 290.836 moveto
+352.048 312.465 lineto
+348.735 290.836 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+383.21 278.924 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+413.426 284.192 moveto
+401.242 324.246 lineto
+413.426 284.192 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+366.091 352.661 moveto
+376.534 318.329 lineto
+366.091 352.661 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+341.473 343.83 moveto
+339.998 338.23 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+387.366 277.454 moveto
+409.858 282.84 lineto
+390.934 278.805 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+339.684 334.335 moveto
+352.048 312.465 lineto
+339.684 334.335 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+366.566 358.914 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+341.473 313.192 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+409.858 282.84 moveto
+413.426 284.192 lineto
+390.934 278.805 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+343.82 304 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+339.998 322.371 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+352.048 285.912 moveto
+352.048 312.465 lineto
+352.048 285.912 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 282.358 moveto
+358.086 278.765 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+318.692 307.302 moveto
+320.726 299.335 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+346.879 295.42 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+387.366 277.454 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+383.919 282.838 moveto
+376.534 318.329 lineto
+383.919 282.838 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+370.135 360.265 moveto
+366.566 358.914 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+317.413 315.257 moveto
+318.692 307.302 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+320.726 299.335 moveto
+323.377 291.899 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+339.494 330.911 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+350.441 288.039 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+396.783 364.182 moveto
+401.242 324.246 lineto
+396.783 364.182 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+316.977 322.658 moveto
+317.413 315.257 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+387.366 277.454 moveto
+390.934 278.805 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+370.135 360.265 lineto
+378.75 318.859 lineto
+closepath fill
+
+[396.783 392.627 370.135 364.182 365.652 360.265] [0.72549 0.72549 0] [0.568627 0.568627 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+340.963 339.188 moveto
+352.048 312.465 lineto
+340.963 339.188 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+323.377 291.899 moveto
+326.464 285.502 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+339.998 338.23 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+390.934 278.805 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+343.82 347.328 moveto
+341.473 343.83 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+354.264 282.358 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+369.15 353.82 moveto
+376.534 318.329 lineto
+369.15 353.82 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+416.165 288.273 moveto
+401.242 324.246 lineto
+416.165 288.273 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+355.361 282.798 moveto
+352.048 312.465 lineto
+355.361 282.798 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+318.608 306.738 moveto
+327.561 306.6 lineto
+318.608 306.738 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+320.251 300.303 moveto
+327.561 306.6 lineto
+320.251 300.303 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+317.413 329.001 moveto
+316.977 322.658 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+317.575 313.163 moveto
+327.561 306.6 lineto
+317.575 313.163 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+358.086 278.765 moveto
+361.648 277.505 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+341.473 343.83 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+374.29 358.795 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+322.392 294.298 moveto
+327.561 306.6 lineto
+322.392 294.298 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+386.978 283.996 moveto
+376.534 318.329 lineto
+386.978 283.996 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+326.464 285.502 moveto
+329.777 280.579 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+358.086 278.765 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+393.672 282.886 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+374.29 358.795 moveto
+370.135 360.265 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+317.223 319.141 moveto
+327.561 306.6 lineto
+317.223 319.141 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+361.648 277.505 moveto
+383.919 282.838 lineto
+364.707 278.663 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+342.997 342.219 moveto
+352.048 312.465 lineto
+342.997 342.219 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+383.919 282.838 moveto
+386.978 283.996 lineto
+364.707 278.663 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+401.242 359.99 moveto
+401.242 324.246 lineto
+401.242 359.99 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+324.885 289.131 moveto
+327.561 306.6 lineto
+324.885 289.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+343.82 347.328 lineto
+354.264 312.995 lineto
+closepath fill
+
+[390.934 413.426 393.672 278.805 284.192 282.886] [0.4 0.4 0] [0.4 0.4 0] [0.568627 0.568627 0] gouraudtriangle
+[374.29 396.783 370.135 358.795 364.182 360.265] [0.72549 0.72549 0] [0.72549 0.72549 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+378.75 354.603 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+318.692 333.854 moveto
+317.413 329.001 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+390.934 278.805 moveto
+393.672 282.886 lineto
+378.75 318.859 lineto
+closepath fill
+
+[413.426 416.165 393.672 284.192 288.273 282.886] [0.4 0.4 0] [0.568627 0.568627 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+361.648 277.505 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+346.879 348.486 moveto
+343.82 347.328 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+358.448 281.706 moveto
+352.048 312.465 lineto
+358.448 281.706 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+318.692 307.302 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+395.394 289.419 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+320.726 299.335 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+372.712 352.559 moveto
+376.534 318.329 lineto
+372.712 352.559 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+417.886 294.805 moveto
+401.242 324.246 lineto
+417.886 294.805 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+317.575 324.265 moveto
+327.561 306.6 lineto
+317.575 324.265 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+317.413 315.257 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 280.579 moveto
+333.09 277.465 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+323.377 291.899 lineto
+329.777 307.131 lineto
+closepath fill
+
+[372.712 369.15 346.879 352.559 353.82 348.486] [0.72549 0.72549 0] [0.568627 0.568627 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+327.561 285.154 moveto
+327.561 306.6 lineto
+327.561 285.154 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+361.648 277.505 moveto
+364.707 278.663 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+346.879 348.486 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+383.21 347.976 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+316.977 322.658 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+389.325 287.495 moveto
+376.534 318.329 lineto
+389.325 287.495 lineto
+closepath fill
+
+1 1 1 setrgbcolor
+486.413 600 moveto
+102.625 600 lineto stroke
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+326.464 285.502 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+395.981 297.958 lineto
+378.75 318.859 lineto
+closepath fill
+
+[401.242 396.783 374.29 359.99 364.182 358.795] [0.862745 0.862745 0] [0.72549 0.72549 0] [0.72549 0.72549 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+364.707 278.663 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+296.337 301.405 moveto
+297.98 294.97 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+345.648 343.223 moveto
+352.048 312.465 lineto
+345.648 343.223 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+405.702 353.362 moveto
+401.242 324.246 lineto
+405.702 353.362 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+317.413 329.001 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+387.366 339.364 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+295.304 307.83 moveto
+296.337 301.405 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 354.603 moveto
+374.29 358.795 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+297.98 294.97 moveto
+300.121 288.964 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+318.608 328.184 moveto
+327.561 306.6 lineto
+318.608 328.184 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+320.726 336.886 moveto
+318.692 333.854 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+395.394 307.921 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+329.777 280.579 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+350.441 347.226 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+390.934 329.355 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+378.75 318.859 moveto
+393.672 318.63 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+418.473 303.344 moveto
+401.242 324.246 lineto
+418.473 303.344 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+361.099 282.71 moveto
+352.048 312.465 lineto
+361.099 282.71 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+294.952 313.808 moveto
+295.304 307.83 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+330.237 282.639 moveto
+327.561 306.6 lineto
+330.237 282.639 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+376.534 348.966 moveto
+376.534 318.329 lineto
+376.534 348.966 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+367.054 282.161 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+350.441 347.226 moveto
+346.879 348.486 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+333.09 277.465 moveto
+336.177 276.373 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+300.121 288.964 moveto
+302.615 283.797 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+318.692 333.854 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+393.672 282.886 moveto
+395.394 289.419 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+333.09 277.465 lineto
+329.777 307.131 lineto
+closepath fill
+
+[364.707 386.978 367.054 278.663 283.996 282.161] [0.4 0.4 0] [0.4 0.4 0] [0.568627 0.568627 0] gouraudtriangle
+[350.441 372.712 346.879 347.226 352.559 348.486] [0.72549 0.72549 0] [0.72549 0.72549 0] [0.568627 0.568627 0] gouraudtriangle
+[386.978 389.325 367.054 283.996 287.495 282.161] [0.4 0.4 0] [0.568627 0.568627 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+358.448 281.706 moveto
+361.099 282.71 lineto
+338.828 277.376 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+295.827 300.848 moveto
+303.075 300.736 lineto
+295.827 300.848 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+390.8 293.094 moveto
+376.534 318.329 lineto
+390.8 293.094 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+336.177 276.373 moveto
+358.448 281.706 lineto
+338.828 277.376 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+297.157 295.639 moveto
+303.075 300.736 lineto
+297.157 295.639 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+409.858 344.75 moveto
+401.242 324.246 lineto
+409.858 344.75 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+354.264 343.633 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+295.304 318.931 moveto
+294.952 313.808 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+364.707 278.663 moveto
+367.054 282.161 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+294.991 306.049 moveto
+303.075 300.736 lineto
+294.991 306.049 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+320.251 330.633 moveto
+327.561 306.6 lineto
+320.251 330.633 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+368.53 287.761 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+417.886 313.308 moveto
+401.242 324.246 lineto
+417.886 313.308 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+320.726 336.886 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+298.89 290.777 moveto
+303.075 300.736 lineto
+298.89 290.777 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+348.735 342.131 moveto
+352.048 312.465 lineto
+348.735 342.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+302.615 283.797 moveto
+305.291 279.821 lineto
+305.291 301.267 lineto
+closepath fill
+
+[393.672 416.165 395.394 282.886 288.273 289.419] [0.568627 0.568627 0] [0.568627 0.568627 0] [0.72549 0.72549 0] gouraudtriangle
+[378.75 401.242 374.29 354.603 359.99 358.795] [0.862745 0.862745 0] [0.862745 0.862745 0] [0.72549 0.72549 0] gouraudtriangle
+[416.165 417.886 395.394 288.273 294.805 289.419] [0.568627 0.568627 0] [0.72549 0.72549 0] [0.72549 0.72549 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+336.177 276.373 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+323.377 337.89 moveto
+320.726 336.886 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+294.705 310.889 moveto
+303.075 300.736 lineto
+294.705 310.889 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+413.426 334.741 moveto
+401.242 324.246 lineto
+413.426 334.741 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+332.73 281.757 moveto
+327.561 306.6 lineto
+332.73 281.757 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+383.21 347.976 moveto
+378.75 354.603 lineto
+378.75 318.859 lineto
+closepath fill
+
+[348.735 345.648 323.377 342.131 343.223 337.89] [0.72549 0.72549 0] [0.568627 0.568627 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+358.086 337.952 lineto
+354.264 312.995 lineto
+closepath fill
+
+[376.534 372.712 350.441 348.966 352.559 347.226] [0.862745 0.862745 0] [0.72549 0.72549 0] [0.72549 0.72549 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+416.165 324.017 moveto
+401.242 324.246 lineto
+416.165 324.017 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+380.357 343.286 moveto
+376.534 318.329 lineto
+380.357 343.286 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+363.133 285.742 moveto
+352.048 312.465 lineto
+363.133 285.742 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+300.909 286.594 moveto
+303.075 300.736 lineto
+300.909 286.594 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+369.033 295.08 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+296.337 322.851 moveto
+295.304 318.931 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+336.177 276.373 moveto
+338.828 277.376 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+323.377 337.89 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+395.394 289.419 moveto
+395.981 297.958 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+361.648 330.57 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+391.303 300.413 moveto
+376.534 318.329 lineto
+391.303 300.413 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+296.337 301.405 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 343.633 moveto
+350.441 347.226 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+297.98 294.97 lineto
+305.291 301.267 lineto
+closepath fill
+
+[405.702 401.242 378.75 353.362 359.99 354.603] [0.964706 0.964706 0] [0.862745 0.862745 0] [0.862745 0.862745 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+368.53 303.62 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+295.304 307.83 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+294.991 315.036 moveto
+303.075 300.736 lineto
+294.991 315.036 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+338.828 277.376 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 279.821 moveto
+307.966 277.306 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+300.121 288.964 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+364.707 321.991 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+354.264 312.995 moveto
+367.054 312.799 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+322.392 331.444 moveto
+327.561 306.6 lineto
+322.392 331.444 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+303.075 283.375 moveto
+303.075 300.736 lineto
+303.075 283.375 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+294.952 313.808 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+367.054 282.161 moveto
+368.53 287.761 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+352.048 339.017 moveto
+352.048 312.465 lineto
+352.048 339.017 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+302.615 283.797 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+383.919 335.904 moveto
+376.534 318.329 lineto
+383.919 335.904 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+326.464 336.798 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+278.875 296.788 moveto
+280.205 291.579 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+334.872 282.568 moveto
+327.561 306.6 lineto
+334.872 282.568 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+278.038 301.989 moveto
+278.875 296.788 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+387.366 339.364 moveto
+383.21 347.976 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+390.8 308.953 moveto
+376.534 318.329 lineto
+390.8 308.953 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+295.304 318.931 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+280.205 291.579 moveto
+281.938 286.717 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+340.862 280.408 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+326.464 336.798 moveto
+323.377 337.89 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+364.411 290.595 moveto
+352.048 312.465 lineto
+364.411 290.595 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+297.98 325.3 moveto
+296.337 322.851 lineto
+305.291 301.267 lineto
+closepath fill
+
+[361.099 363.133 340.862 282.71 285.742 280.408] [0.4 0.4 0] [0.568627 0.568627 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+295.827 318.209 moveto
+303.075 300.736 lineto
+295.827 318.209 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+305.291 279.821 lineto
+305.291 301.267 lineto
+closepath fill
+
+[389.325 390.8 368.53 287.495 293.094 287.761] [0.568627 0.568627 0] [0.72549 0.72549 0] [0.72549 0.72549 0] gouraudtriangle
+[338.828 361.099 340.862 277.376 282.71 280.408] [0.4 0.4 0] [0.4 0.4 0] [0.568627 0.568627 0] gouraudtriangle
+[326.464 348.735 323.377 336.798 342.131 337.89] [0.72549 0.72549 0] [0.72549 0.72549 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+386.978 327.325 moveto
+376.534 318.329 lineto
+386.978 327.325 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+277.753 306.829 moveto
+278.038 301.989 lineto
+286.122 296.677 lineto
+closepath fill
+
+[367.054 389.325 368.53 282.161 287.495 287.761] [0.568627 0.568627 0] [0.568627 0.568627 0] [0.72549 0.72549 0] gouraudtriangle
+[354.264 376.534 350.441 343.633 348.966 347.226] [0.862745 0.862745 0] [0.862745 0.862745 0] [0.72549 0.72549 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+395.981 297.958 moveto
+395.394 307.921 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+389.325 318.132 moveto
+376.534 318.329 lineto
+389.325 318.132 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+281.938 286.717 moveto
+283.956 282.534 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+305.241 281.339 moveto
+303.075 300.736 lineto
+305.241 281.339 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+329.777 333.684 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+332.73 281.757 moveto
+334.872 282.568 lineto
+312.601 277.234 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+307.966 277.306 moveto
+310.46 276.424 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+296.337 322.851 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+338.828 277.376 moveto
+340.862 280.408 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+358.086 337.952 moveto
+354.264 343.633 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+324.885 330.562 moveto
+327.561 306.6 lineto
+324.885 330.562 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+342.141 285.261 lineto
+329.777 307.131 lineto
+closepath fill
+
+[417.886 418.473 395.981 294.805 303.344 297.958] [0.72549 0.72549 0] [0.862745 0.862745 0] [0.862745 0.862745 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+310.46 276.424 moveto
+332.73 281.757 lineto
+312.601 277.234 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+307.966 277.306 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+355.361 334.094 moveto
+352.048 312.465 lineto
+355.361 334.094 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+390.934 329.355 moveto
+387.366 339.364 lineto
+378.75 318.859 lineto
+closepath fill
+
+[395.394 417.886 395.981 289.419 294.805 297.958] [0.72549 0.72549 0] [0.72549 0.72549 0] [0.862745 0.862745 0] gouraudtriangle
+[383.21 405.702 378.75 347.976 353.362 354.603] [0.964706 0.964706 0] [0.964706 0.964706 0] [0.862745 0.862745 0] gouraudtriangle
+[352.048 348.735 326.464 339.017 342.131 336.798] [0.862745 0.862745 0] [0.72549 0.72549 0] [0.72549 0.72549 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+278.038 310.976 moveto
+277.753 306.829 lineto
+286.122 296.677 lineto
+closepath fill
+
+[380.357 376.534 354.264 343.286 348.966 343.633] [0.964706 0.964706 0] [0.862745 0.862745 0] [0.862745 0.862745 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+278.364 296.231 moveto
+283.906 296.146 lineto
+278.364 296.231 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+395.394 307.921 moveto
+393.672 318.63 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+279.381 292.248 moveto
+283.906 296.146 lineto
+279.381 292.248 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+368.53 287.761 moveto
+369.033 295.08 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+333.09 328.76 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+336.515 285.017 moveto
+327.561 306.6 lineto
+336.515 285.017 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+283.956 282.534 moveto
+286.122 279.315 lineto
+286.122 296.677 lineto
+closepath fill
+
+[324.885 322.392 300.121 330.562 331.444 326.111] [0.72549 0.72549 0] [0.568627 0.568627 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+297.157 320.191 moveto
+303.075 300.736 lineto
+297.157 320.191 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+297.98 325.3 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+364.848 296.938 moveto
+352.048 312.465 lineto
+364.848 296.938 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+277.725 300.209 moveto
+283.906 296.146 lineto
+277.725 300.209 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+393.672 318.63 moveto
+390.934 329.355 lineto
+378.75 318.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+342.577 291.604 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+280.706 288.53 moveto
+283.906 296.146 lineto
+280.706 288.53 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+310.46 276.424 lineto
+305.291 301.267 lineto
+closepath fill
+
+[409.858 405.702 383.21 344.75 353.362 347.976] [1 1 0] [0.964706 0.964706 0] [0.964706 0.964706 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+300.121 326.111 moveto
+297.98 325.3 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+307.259 280.625 moveto
+303.075 300.736 lineto
+307.259 280.625 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+336.177 322.363 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 333.684 moveto
+326.464 336.798 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+277.507 303.909 moveto
+283.906 296.146 lineto
+277.507 303.909 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+342.141 299.006 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+278.875 314.149 moveto
+278.038 310.976 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+358.448 327.696 moveto
+352.048 312.465 lineto
+358.448 327.696 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+282.25 285.331 moveto
+283.906 296.146 lineto
+282.25 285.331 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+338.828 314.928 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+329.777 307.131 moveto
+340.862 306.961 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+310.46 276.424 moveto
+312.601 277.234 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+300.121 326.111 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+361.648 330.57 moveto
+358.086 337.952 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+278.875 296.788 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+327.561 328.047 moveto
+327.561 306.6 lineto
+327.561 328.047 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+280.205 291.579 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+364.411 304.339 moveto
+352.048 312.465 lineto
+364.411 304.339 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+278.038 301.989 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 279.315 moveto
+288.289 277.279 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+281.938 286.717 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+340.862 280.408 moveto
+342.141 285.261 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+312.601 277.234 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+277.725 307.081 moveto
+283.906 296.146 lineto
+277.725 307.081 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+369.033 295.08 moveto
+368.53 303.62 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+277.753 306.829 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+337.547 288.936 moveto
+327.561 306.6 lineto
+337.547 288.936 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+361.099 320.261 moveto
+352.048 312.465 lineto
+361.099 320.261 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+298.89 320.848 moveto
+303.075 300.736 lineto
+298.89 320.848 lineto
+closepath fill
+
+[390.8 391.303 369.033 293.094 300.413 295.08] [0.72549 0.72549 0] [0.862745 0.862745 0] [0.862745 0.862745 0] gouraudtriangle
+[363.133 364.411 342.141 285.742 290.595 285.261] [0.568627 0.568627 0] [0.72549 0.72549 0] [0.72549 0.72549 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+363.133 312.294 moveto
+352.048 312.465 lineto
+363.133 312.294 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+283.956 282.534 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+283.906 282.87 moveto
+283.906 296.146 lineto
+283.906 282.87 lineto
+closepath fill
+
+[334.872 336.515 314.244 282.568 285.017 279.683] [0.4 0.4 0] [0.568627 0.568627 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+302.615 325.228 lineto
+305.291 301.267 lineto
+closepath fill
+
+[340.862 363.133 342.141 280.408 285.742 285.261] [0.568627 0.568627 0] [0.568627 0.568627 0] [0.72549 0.72549 0] gouraudtriangle
+[329.777 352.048 326.464 333.684 339.017 336.798] [0.862745 0.862745 0] [0.862745 0.862745 0] [0.72549 0.72549 0] gouraudtriangle
+[418.473 417.886 395.394 303.344 313.308 307.921] [0.862745 0.862745 0] [0.964706 0.964706 0] [0.964706 0.964706 0] gouraudtriangle
+[368.53 390.8 369.033 287.761 293.094 295.08] [0.72549 0.72549 0] [0.72549 0.72549 0] [0.862745 0.862745 0] gouraudtriangle
+[358.086 380.357 354.264 337.952 343.286 343.633] [0.964706 0.964706 0] [0.964706 0.964706 0] [0.862745 0.862745 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+278.038 310.976 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+308.993 281.281 moveto
+303.075 300.736 lineto
+308.993 281.281 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+364.707 321.991 moveto
+361.648 330.57 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+280.205 316.132 moveto
+278.875 314.149 lineto
+286.122 296.677 lineto
+closepath fill
+
+[312.601 334.872 314.244 277.234 282.568 279.683] [0.4 0.4 0] [0.4 0.4 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+314.244 279.683 lineto
+305.291 301.267 lineto
+closepath fill
+
+[302.615 324.885 300.121 325.228 330.562 326.111] [0.72549 0.72549 0] [0.72549 0.72549 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+302.615 325.228 moveto
+300.121 326.111 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+286.122 279.315 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+368.53 303.62 moveto
+367.054 312.799 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+278.364 309.507 moveto
+283.906 296.146 lineto
+278.364 309.507 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+330.237 324.07 moveto
+327.561 306.6 lineto
+330.237 324.07 lineto
+closepath fill
+
+[383.919 380.357 358.086 335.904 343.286 337.952] [1 1 0] [0.964706 0.964706 0] [0.964706 0.964706 0] gouraudtriangle
+[395.981 418.473 395.394 297.958 303.344 307.921] [0.862745 0.862745 0] [0.862745 0.862745 0] [0.964706 0.964706 0] gouraudtriangle
+[387.366 409.858 383.21 339.364 344.75 347.976] [1 1 0] [1 1 0] [0.964706 0.964706 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+333.09 328.76 moveto
+329.777 333.684 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+413.426 334.741 moveto
+409.858 344.75 lineto
+387.366 339.364 lineto
+closepath fill
+
+[355.361 352.048 329.777 334.094 339.017 333.684] [0.964706 0.964706 0] [0.862745 0.862745 0] [0.862745 0.862745 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+367.054 312.799 moveto
+364.707 321.991 lineto
+354.264 312.995 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+288.289 277.279 moveto
+290.307 276.565 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+278.875 314.149 lineto
+286.122 296.677 lineto
+closepath fill
+
+[327.561 324.885 302.615 328.047 330.562 325.228] [0.862745 0.862745 0] [0.72549 0.72549 0] [0.72549 0.72549 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+305.291 322.713 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+261.301 292.145 moveto
+262.318 288.161 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+307.259 280.625 moveto
+308.993 281.281 lineto
+292.04 277.222 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+285.563 281.313 moveto
+283.906 296.146 lineto
+285.563 281.313 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+337.9 294.06 moveto
+327.561 306.6 lineto
+337.9 294.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+312.601 277.234 moveto
+314.244 279.683 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+260.662 296.122 moveto
+261.301 292.145 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+288.289 277.279 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+262.318 288.161 moveto
+263.643 284.444 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+290.307 276.565 moveto
+307.259 280.625 lineto
+292.04 277.222 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+315.277 283.603 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+235.03 286.94 moveto
+244.836 286.789 lineto
+235.03 286.94 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+300.909 320.134 moveto
+303.075 300.736 lineto
+300.909 320.134 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+342.141 285.261 moveto
+342.577 291.604 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+234.892 286.907 moveto
+236.691 279.859 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+236.829 279.892 moveto
+244.836 286.789 lineto
+236.829 279.892 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+260.444 299.823 moveto
+260.662 296.122 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+233.76 293.944 moveto
+234.892 286.907 lineto
+244.698 286.756 lineto
+closepath fill
+
+[417.886 416.165 393.672 313.308 324.017 318.63] [0.964706 0.964706 0] [1 1 0] [1 1 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+280.205 316.132 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+232.676 286.376 moveto
+242.482 286.225 lineto
+232.676 286.376 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+307.966 318.737 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+332.73 318.903 moveto
+327.561 306.6 lineto
+332.73 318.903 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+263.643 284.444 moveto
+265.187 281.245 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+236.691 279.859 moveto
+239.036 273.282 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+233.899 293.977 moveto
+244.836 286.789 lineto
+233.899 293.977 lineto
+closepath fill
+
+[300.909 298.89 281.938 320.134 320.848 316.788] [0.72549 0.72549 0] [0.568627 0.568627 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+310.323 283.264 moveto
+303.075 300.736 lineto
+310.323 283.264 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+279.381 311.023 moveto
+283.906 296.146 lineto
+279.381 311.023 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+234.475 279.328 moveto
+242.482 286.225 lineto
+234.475 279.328 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+416.165 324.017 moveto
+413.426 334.741 lineto
+390.934 329.355 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+232.343 286.296 moveto
+234.143 279.249 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+315.629 288.726 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+290.307 276.565 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+281.938 316.788 moveto
+280.205 316.132 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+337.547 300.038 moveto
+327.561 306.6 lineto
+337.547 300.038 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+231.212 293.334 moveto
+232.343 286.296 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+239.175 273.315 moveto
+244.836 286.789 lineto
+239.175 273.315 lineto
+closepath fill
+
+[391.303 390.8 368.53 300.413 308.953 303.62] [0.862745 0.862745 0] [0.964706 0.964706 0] [0.964706 0.964706 0] gouraudtriangle
+newpath
+0.4 0.4 0.4 setrgbcolor
+231.544 293.413 moveto
+242.482 286.225 lineto
+231.544 293.413 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+234.143 279.249 moveto
+236.488 272.671 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+287.106 280.767 moveto
+283.906 296.146 lineto
+287.106 280.767 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+260.662 302.995 moveto
+260.444 299.823 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+310.46 313.57 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 322.713 moveto
+302.615 325.228 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+233.375 300.491 moveto
+233.76 293.944 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+336.177 322.363 moveto
+333.09 328.76 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+334.872 312.898 moveto
+327.561 306.6 lineto
+334.872 312.898 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+315.277 294.704 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+336.515 306.463 moveto
+327.561 306.6 lineto
+336.515 306.463 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+236.82 272.751 moveto
+242.482 286.225 lineto
+236.82 272.751 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+290.307 276.565 moveto
+292.04 277.222 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+281.938 316.788 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+265.187 281.245 moveto
+266.844 278.783 lineto
+266.844 292.06 lineto
+closepath fill
+
+[364.411 364.848 342.577 290.595 296.938 291.604] [0.72549 0.72549 0] [0.862745 0.862745 0] [0.862745 0.862745 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+312.601 307.564 lineto
+305.291 301.267 lineto
+closepath fill
+
+[395.394 417.886 393.672 307.921 313.308 318.63] [0.964706 0.964706 0] [0.964706 0.964706 0] [1 1 0] gouraudtriangle
+newpath
+1 1 0 setrgbcolor
+390.934 329.355 moveto
+413.426 334.741 lineto
+387.366 339.364 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+305.291 301.267 moveto
+314.244 301.129 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+386.978 327.325 moveto
+383.919 335.904 lineto
+361.648 330.57 lineto
+closepath fill
+
+[336.515 337.547 315.277 285.017 288.936 283.603] [0.568627 0.568627 0] [0.72549 0.72549 0] [0.72549 0.72549 0] gouraudtriangle
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+239.036 273.282 moveto
+241.767 267.622 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+342.577 291.604 moveto
+342.141 299.006 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+303.075 318.098 moveto
+303.075 300.736 lineto
+303.075 318.098 lineto
+closepath fill
+
+[369.033 391.303 368.53 295.08 300.413 303.62] [0.862745 0.862745 0] [0.862745 0.862745 0] [0.964706 0.964706 0] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+230.826 299.881 moveto
+231.212 293.334 lineto
+242.149 286.146 lineto
+closepath fill
+
+[361.648 383.919 358.086 330.57 335.904 337.952] [1 1 0] [1 1 0] [0.964706 0.964706 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+292.04 277.222 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+233.513 300.524 moveto
+244.836 286.789 lineto
+233.513 300.524 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+314.244 279.683 moveto
+315.277 283.603 lineto
+305.291 301.267 lineto
+closepath fill
+
+[342.141 364.411 342.577 285.261 290.595 291.604] [0.72549 0.72549 0] [0.72549 0.72549 0] [0.862745 0.862745 0] gouraudtriangle
+[333.09 355.361 329.777 328.76 334.094 333.684] [0.964706 0.964706 0] [0.964706 0.964706 0] [0.862745 0.862745 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+280.706 311.525 moveto
+283.906 296.146 lineto
+280.706 311.525 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+236.488 272.671 moveto
+239.219 267.012 lineto
+242.149 286.146 lineto
+closepath fill
+
+[314.244 336.515 315.277 279.683 285.017 283.603] [0.568627 0.568627 0] [0.568627 0.568627 0] [0.72549 0.72549 0] gouraudtriangle
+[305.291 327.561 302.615 322.713 328.047 325.228] [0.862745 0.862745 0] [0.862745 0.862745 0] [0.72549 0.72549 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+311.159 286.437 moveto
+303.075 300.736 lineto
+311.159 286.437 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+261.301 305.421 moveto
+260.662 302.995 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+231.159 299.961 moveto
+242.482 286.225 lineto
+231.159 299.961 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+241.905 267.656 moveto
+244.836 286.789 lineto
+241.905 267.656 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+393.672 318.63 moveto
+416.165 324.017 lineto
+390.934 329.355 lineto
+closepath fill
+
+[358.448 355.361 333.09 327.696 334.094 328.76] [1 1 0] [0.964706 0.964706 0] [0.964706 0.964706 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+283.956 316.074 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+261.301 292.145 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+338.828 314.928 moveto
+336.177 322.363 lineto
+329.777 307.131 lineto
+closepath fill
+
+[390.8 389.325 367.054 308.953 318.132 312.799] [0.964706 0.964706 0] [1 1 0] [1 1 0] gouraudtriangle
+[308.993 310.323 293.37 281.281 283.264 279.204] [0.4 0.4 0] [0.568627 0.568627 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+262.318 288.161 lineto
+266.844 292.06 lineto
+closepath fill
+
+[330.237 327.561 305.291 324.07 328.047 322.713] [0.964706 0.964706 0] [0.862745 0.862745 0] [0.862745 0.862745 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+288.432 281.269 moveto
+283.906 296.146 lineto
+288.432 281.269 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+260.662 296.122 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 278.783 moveto
+268.5 277.226 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+293.37 279.204 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+389.325 318.132 moveto
+386.978 327.325 lineto
+364.707 321.991 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+233.76 306.103 moveto
+233.375 300.491 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+263.643 284.444 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+283.956 316.074 moveto
+281.938 316.788 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+342.141 299.006 moveto
+340.862 306.961 lineto
+329.777 307.131 lineto
+closepath fill
+
+[292.04 308.993 293.37 277.222 281.281 279.204] [0.4 0.4 0] [0.4 0.4 0] [0.568627 0.568627 0] gouraudtriangle
+[283.956 300.909 281.938 316.074 320.134 316.788] [0.72549 0.72549 0] [0.72549 0.72549 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.4 0.4 0.4 setrgbcolor
+239.551 267.092 moveto
+242.482 286.225 lineto
+239.551 267.092 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+260.444 299.823 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+340.862 306.961 moveto
+338.828 314.928 lineto
+329.777 307.131 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+265.187 281.245 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+307.966 318.737 moveto
+305.291 322.713 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+305.241 314.878 moveto
+303.075 300.736 lineto
+305.241 314.878 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+231.212 305.492 moveto
+230.826 299.881 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+286.122 314.038 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+241.767 267.622 moveto
+244.698 263.267 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+292.04 277.222 moveto
+293.37 279.204 lineto
+286.122 296.677 lineto
+closepath fill
+
+[303.075 300.909 283.956 318.098 320.134 316.074] [0.862745 0.862745 0] [0.72549 0.72549 0] [0.72549 0.72549 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+260.662 302.995 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+294.207 282.377 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+282.25 310.979 moveto
+283.906 296.146 lineto
+282.25 310.979 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+233.899 306.136 moveto
+244.836 286.789 lineto
+233.899 306.136 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+311.444 290.584 moveto
+303.075 300.736 lineto
+311.444 290.584 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+287.106 280.767 moveto
+288.432 281.269 lineto
+271.369 277.182 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+262.318 306.937 moveto
+261.301 305.421 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+266.844 278.783 lineto
+266.844 292.06 lineto
+closepath fill
+
+[368.53 390.8 367.054 303.62 308.953 312.799] [0.964706 0.964706 0] [0.964706 0.964706 0] [1 1 0] gouraudtriangle
+newpath
+1 1 0 setrgbcolor
+364.707 321.991 moveto
+386.978 327.325 lineto
+361.648 330.57 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+315.277 283.603 moveto
+315.629 288.726 lineto
+305.291 301.267 lineto
+closepath fill
+
+[364.848 364.411 342.141 296.938 304.339 299.006] [0.862745 0.862745 0] [0.964706 0.964706 0] [0.964706 0.964706 0] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+239.219 267.012 moveto
+242.149 262.657 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+288.289 310.819 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+289.449 282.784 moveto
+283.906 296.146 lineto
+289.449 282.784 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+270.043 276.68 moveto
+287.106 280.767 lineto
+271.369 277.182 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+268.5 277.226 moveto
+270.043 276.68 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+231.544 305.572 moveto
+242.482 286.225 lineto
+231.544 305.572 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+261.301 305.421 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+294.492 286.524 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+307.259 310.696 moveto
+303.075 300.736 lineto
+307.259 310.696 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+244.836 263.3 moveto
+244.836 286.789 lineto
+244.836 263.3 lineto
+closepath fill
+
+[337.547 337.9 315.629 288.936 294.06 288.726] [0.72549 0.72549 0] [0.862745 0.862745 0] [0.862745 0.862745 0] gouraudtriangle
+[282.25 280.706 263.643 310.979 311.525 307.439] [0.72549 0.72549 0] [0.568627 0.568627 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+268.5 277.226 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+367.054 312.799 moveto
+389.325 318.132 lineto
+364.707 321.991 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+361.099 320.261 moveto
+358.448 327.696 lineto
+336.177 322.363 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+311.159 295.423 moveto
+303.075 300.736 lineto
+311.159 295.423 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+290.307 306.636 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 314.038 moveto
+283.956 316.074 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+294.207 291.364 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+310.46 313.57 moveto
+307.966 318.737 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+234.892 310.395 moveto
+233.76 306.103 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+242.482 262.736 moveto
+242.482 286.225 lineto
+242.482 262.736 lineto
+closepath fill
+
+[342.577 364.848 342.141 291.604 296.938 299.006] [0.862745 0.862745 0] [0.862745 0.862745 0] [0.964706 0.964706 0] gouraudtriangle
+[336.177 358.448 333.09 322.363 327.696 328.76] [1 1 0] [1 1 0] [0.964706 0.964706 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+292.04 301.774 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+262.318 306.937 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+308.993 305.834 moveto
+303.075 300.736 lineto
+308.993 305.834 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+286.122 296.677 moveto
+293.37 296.565 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+283.906 309.422 moveto
+283.906 296.146 lineto
+283.906 309.422 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+310.323 300.625 moveto
+303.075 300.736 lineto
+310.323 300.625 lineto
+closepath fill
+
+[332.73 330.237 307.966 318.903 324.07 318.737] [1 1 0] [0.964706 0.964706 0] [0.964706 0.964706 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+270.043 276.68 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+263.643 307.439 moveto
+262.318 306.937 lineto
+266.844 292.06 lineto
+closepath fill
+
+[310.323 311.159 294.207 283.264 286.437 282.377] [0.568627 0.568627 0] [0.72549 0.72549 0] [0.72549 0.72549 0] gouraudtriangle
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+234.892 286.907 lineto
+244.698 286.756 lineto
+closepath fill
+
+[315.277 337.547 315.629 283.603 288.936 288.726] [0.72549 0.72549 0] [0.72549 0.72549 0] [0.862745 0.862745 0] gouraudtriangle
+[307.966 330.237 305.291 318.737 324.07 322.713] [0.964706 0.964706 0] [0.964706 0.964706 0] [0.862745 0.862745 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+315.629 288.726 moveto
+315.277 294.704 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+293.37 279.204 moveto
+294.207 282.377 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+236.691 279.859 lineto
+244.698 286.756 lineto
+closepath fill
+
+[364.411 363.133 340.862 304.339 312.294 306.961] [0.964706 0.964706 0] [1 1 0] [1 1 0] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+232.343 309.785 moveto
+231.212 305.492 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+290.088 285.211 moveto
+283.906 296.146 lineto
+290.088 285.211 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+233.76 293.944 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+363.133 312.294 moveto
+361.099 320.261 lineto
+338.828 314.928 lineto
+closepath fill
+
+[293.37 310.323 294.207 279.204 283.264 282.377] [0.568627 0.568627 0] [0.568627 0.568627 0] [0.72549 0.72549 0] gouraudtriangle
+[286.122 303.075 283.956 314.038 318.098 316.074] [0.862745 0.862745 0] [0.862745 0.862745 0] [0.72549 0.72549 0] gouraudtriangle
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 263.267 moveto
+247.628 260.513 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+239.036 273.282 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+270.043 276.68 moveto
+271.369 277.182 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+263.643 307.439 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+232.343 286.296 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+234.143 279.249 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+312.601 307.564 moveto
+310.46 313.57 lineto
+305.291 301.267 lineto
+closepath fill
+
+[288.432 289.449 272.386 281.269 282.784 278.698] [0.4 0.4 0] [0.568627 0.568627 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.2 0.4 0.4 setrgbcolor
+235.03 310.429 moveto
+244.836 286.789 lineto
+235.03 310.429 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+271.369 277.182 lineto
+266.844 292.06 lineto
+closepath fill
+
+[305.241 303.075 286.122 314.878 318.098 314.038] [0.964706 0.964706 0] [0.862745 0.862745 0] [0.862745 0.862745 0] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+231.212 293.334 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+315.277 294.704 moveto
+314.244 301.129 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+233.375 300.491 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+285.563 306.96 moveto
+283.906 296.146 lineto
+285.563 306.96 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 262.657 moveto
+245.08 259.902 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+236.488 272.671 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+314.244 301.129 moveto
+312.601 307.564 lineto
+305.291 301.267 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+288.289 310.819 moveto
+286.122 314.038 lineto
+286.122 296.677 lineto
+closepath fill
+
+[337.9 337.547 315.277 294.06 300.038 294.704] [0.862745 0.862745 0] [0.964706 0.964706 0] [0.964706 0.964706 0] gouraudtriangle
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+241.767 267.622 lineto
+244.698 286.756 lineto
+closepath fill
+
+[271.369 288.432 272.386 277.182 281.269 278.698] [0.4 0.4 0] [0.4 0.4 0] [0.568627 0.568627 0] gouraudtriangle
+[265.187 282.25 263.643 306.893 310.979 307.439] [0.72549 0.72549 0] [0.72549 0.72549 0] [0.568627 0.568627 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+265.187 306.893 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+290.306 288.382 moveto
+283.906 296.146 lineto
+290.306 288.382 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+232.676 309.865 moveto
+242.482 286.225 lineto
+232.676 309.865 lineto
+closepath fill
+
+[283.906 282.25 265.187 309.422 310.979 306.893] [0.862745 0.862745 0] [0.72549 0.72549 0] [0.72549 0.72549 0] gouraudtriangle
+[342.141 364.411 340.862 299.006 304.339 306.961] [0.964706 0.964706 0] [0.964706 0.964706 0] [1 1 0] gouraudtriangle
+newpath
+1 1 0 setrgbcolor
+338.828 314.928 moveto
+361.099 320.261 lineto
+336.177 322.363 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+272.386 278.698 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+230.826 299.881 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+265.187 306.893 moveto
+263.643 307.439 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+204.644 279.663 moveto
+214.45 279.512 lineto
+204.644 279.663 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+294.207 282.377 moveto
+294.492 286.524 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+247.767 260.546 moveto
+244.836 286.789 lineto
+247.767 260.546 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+334.872 312.898 moveto
+332.73 318.903 lineto
+310.46 313.57 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+206.443 272.615 moveto
+214.45 279.512 lineto
+206.443 272.615 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+204.311 279.583 moveto
+206.111 272.536 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+239.219 267.012 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+287.106 303.762 moveto
+283.906 296.146 lineto
+287.106 303.762 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+233.76 306.103 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+203.18 286.62 moveto
+204.311 279.583 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+266.844 305.336 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.4 0.4 0 setrgbcolor
+290.088 292.083 moveto
+283.906 296.146 lineto
+290.088 292.083 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+271.369 277.182 moveto
+272.386 278.698 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+340.862 306.961 moveto
+363.133 312.294 lineto
+338.828 314.928 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+236.691 313.077 moveto
+234.892 310.395 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+245.412 259.982 moveto
+242.482 286.225 lineto
+245.412 259.982 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+273.025 281.124 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+203.512 286.7 moveto
+214.45 279.512 lineto
+203.512 286.7 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+206.111 272.536 moveto
+208.456 265.958 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+244.698 263.267 lineto
+244.698 286.756 lineto
+closepath fill
+
+[311.159 311.444 294.492 286.437 290.584 286.524] [0.72549 0.72549 0] [0.862745 0.862745 0] [0.862745 0.862745 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+288.432 300.044 moveto
+283.906 296.146 lineto
+288.432 300.044 lineto
+closepath fill
+
+[315.629 337.9 315.277 288.726 294.06 294.704] [0.862745 0.862745 0] [0.862745 0.862745 0] [0.964706 0.964706 0] gouraudtriangle
+[310.46 332.73 307.966 313.57 318.903 318.737] [1 1 0] [1 1 0] [0.964706 0.964706 0] gouraudtriangle
+[337.547 336.515 314.244 300.038 306.463 301.129] [0.964706 0.964706 0] [1 1 0] [1 1 0] gouraudtriangle
+newpath
+0.4 0.4 0 setrgbcolor
+289.449 296.061 moveto
+283.906 296.146 lineto
+289.449 296.061 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+290.307 306.636 moveto
+288.289 310.819 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+231.212 305.492 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+336.515 306.463 moveto
+334.872 312.898 lineto
+312.601 307.564 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+208.788 266.038 moveto
+214.45 279.512 lineto
+208.788 266.038 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+268.5 302.874 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+234.143 312.467 moveto
+232.343 309.785 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+273.243 284.296 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+294.492 286.524 moveto
+294.207 291.364 lineto
+286.122 296.677 lineto
+closepath fill
+
+[289.449 290.088 273.025 282.784 285.211 281.124] [0.568627 0.568627 0] [0.72549 0.72549 0] [0.72549 0.72549 0] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+242.149 262.657 lineto
+242.149 286.146 lineto
+closepath fill
+
+[294.207 311.159 294.492 282.377 286.437 286.524] [0.72549 0.72549 0] [0.72549 0.72549 0] [0.862745 0.862745 0] gouraudtriangle
+[288.289 305.241 286.122 310.819 314.878 314.038] [0.964706 0.964706 0] [0.964706 0.964706 0] [0.862745 0.862745 0] gouraudtriangle
+[307.259 305.241 288.289 310.696 314.878 310.819] [1 1 0] [0.964706 0.964706 0] [0.964706 0.964706 0] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+202.794 293.168 moveto
+203.18 286.62 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+270.043 299.675 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 305.336 moveto
+265.187 306.893 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+247.628 260.513 moveto
+250.359 259.546 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+234.892 310.395 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+273.025 287.997 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+271.369 295.958 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+266.844 292.06 moveto
+272.386 291.974 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+292.04 301.774 moveto
+290.307 306.636 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+208.456 265.958 moveto
+211.187 260.299 lineto
+214.117 279.432 lineto
+closepath fill
+
+[285.563 283.906 266.844 306.96 309.422 305.336] [0.964706 0.964706 0] [0.862745 0.862745 0] [0.862745 0.862745 0] gouraudtriangle
+newpath
+0.2 0.4 0.4 setrgbcolor
+236.829 313.111 moveto
+244.836 286.789 lineto
+236.829 313.111 lineto
+closepath fill
+
+[272.386 289.449 273.025 278.698 282.784 281.124] [0.568627 0.568627 0] [0.568627 0.568627 0] [0.72549 0.72549 0] gouraudtriangle
+[266.844 283.906 265.187 305.336 309.422 306.893] [0.862745 0.862745 0] [0.862745 0.862745 0] [0.72549 0.72549 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+272.386 278.698 moveto
+273.025 281.124 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+294.207 291.364 moveto
+293.37 296.565 lineto
+286.122 296.677 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+203.127 293.247 moveto
+214.45 279.512 lineto
+203.127 293.247 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+247.628 260.513 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+245.08 259.902 moveto
+247.811 258.936 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+232.343 309.785 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+293.37 296.565 moveto
+292.04 301.774 lineto
+286.122 296.677 lineto
+closepath fill
+
+[315.277 337.547 314.244 294.704 300.038 301.129] [0.964706 0.964706 0] [0.964706 0.964706 0] [1 1 0] gouraudtriangle
+newpath
+1 1 0 setrgbcolor
+312.601 307.564 moveto
+334.872 312.898 lineto
+310.46 313.57 lineto
+closepath fill
+
+[311.444 311.159 294.207 290.584 295.423 291.364] [0.862745 0.862745 0] [0.964706 0.964706 0] [0.964706 0.964706 0] gouraudtriangle
+newpath
+0.4 0.4 0.4 setrgbcolor
+234.475 312.547 moveto
+242.482 286.225 lineto
+234.475 312.547 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+211.519 260.378 moveto
+214.45 279.512 lineto
+211.519 260.378 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+245.08 259.902 lineto
+242.149 286.146 lineto
+closepath fill
+
+1 1 1 setrgbcolor
+497.375 0 moveto
+113.587 0 lineto stroke
+newpath
+1 1 0 setrgbcolor
+314.244 301.129 moveto
+336.515 306.463 lineto
+312.601 307.564 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+268.5 302.874 moveto
+266.844 305.336 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+308.993 305.834 moveto
+307.259 310.696 lineto
+290.307 306.636 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+250.498 259.579 moveto
+244.836 286.789 lineto
+250.498 259.579 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+236.691 313.077 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+203.18 298.779 moveto
+202.794 293.168 lineto
+214.117 279.432 lineto
+closepath fill
+
+[290.088 290.306 273.243 285.211 288.382 284.296] [0.72549 0.72549 0] [0.862745 0.862745 0] [0.862745 0.862745 0] gouraudtriangle
+newpath
+0.862745 0.862745 0 setrgbcolor
+273.025 281.124 moveto
+273.243 284.296 lineto
+266.844 292.06 lineto
+closepath fill
+
+[294.492 311.444 294.207 286.524 290.584 291.364] [0.862745 0.862745 0] [0.862745 0.862745 0] [0.964706 0.964706 0] gouraudtriangle
+[290.307 307.259 288.289 306.636 310.696 310.819] [1 1 0] [1 1 0] [0.964706 0.964706 0] gouraudtriangle
+[311.159 310.323 293.37 295.423 300.625 296.565] [0.964706 0.964706 0] [1 1 0] [1 1 0] gouraudtriangle
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+250.359 259.546 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+239.036 313.965 moveto
+236.691 313.077 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+248.143 259.016 moveto
+242.482 286.225 lineto
+248.143 259.016 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+310.323 300.625 moveto
+308.993 305.834 lineto
+292.04 301.774 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+234.143 312.467 lineto
+242.149 286.146 lineto
+closepath fill
+
+[287.106 285.563 268.5 303.762 306.96 302.874] [1 1 0] [0.964706 0.964706 0] [0.964706 0.964706 0] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+211.187 260.299 moveto
+214.117 255.944 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+270.043 299.675 moveto
+268.5 302.874 lineto
+266.844 292.06 lineto
+closepath fill
+
+[273.025 290.088 273.243 281.124 285.211 284.296] [0.72549 0.72549 0] [0.72549 0.72549 0] [0.862745 0.862745 0] gouraudtriangle
+newpath
+0.2 0.4 0.4 setrgbcolor
+250.359 259.546 moveto
+250.498 259.579 lineto
+252.704 260.434 lineto
+closepath fill
+
+[268.5 285.563 266.844 302.874 306.96 305.336] [0.964706 0.964706 0] [0.964706 0.964706 0] [0.862745 0.862745 0] gouraudtriangle
+newpath
+0.4 0.4 0.4 setrgbcolor
+203.512 298.859 moveto
+214.45 279.512 lineto
+203.512 298.859 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+247.811 258.936 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+236.488 313.355 moveto
+234.143 312.467 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+273.243 284.296 moveto
+273.025 287.997 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+250.359 259.546 moveto
+252.704 260.434 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+239.036 313.965 lineto
+244.698 286.756 lineto
+closepath fill
+
+[290.306 290.088 273.025 288.382 292.083 287.997] [0.862745 0.862745 0] [0.964706 0.964706 0] [0.964706 0.964706 0] gouraudtriangle
+newpath
+0.4 0.4 0.4 setrgbcolor
+247.811 258.936 moveto
+248.143 259.016 lineto
+250.156 259.824 lineto
+closepath fill
+
+[294.207 311.159 293.37 291.364 295.423 296.565] [0.964706 0.964706 0] [0.964706 0.964706 0] [1 1 0] gouraudtriangle
+newpath
+1 1 0 setrgbcolor
+292.04 301.774 moveto
+308.993 305.834 lineto
+290.307 306.636 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+271.369 295.958 moveto
+270.043 299.675 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+288.432 300.044 moveto
+287.106 303.762 lineto
+270.043 299.675 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+273.025 287.997 moveto
+272.386 291.974 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+214.45 256.023 moveto
+214.45 279.512 lineto
+214.45 256.023 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+239.175 313.999 moveto
+244.836 286.789 lineto
+239.175 313.999 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0 setrgbcolor
+272.386 291.974 moveto
+271.369 295.958 lineto
+266.844 292.06 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+252.704 260.434 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+293.37 296.565 moveto
+310.323 300.625 lineto
+292.04 301.774 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+247.811 258.936 moveto
+250.156 259.824 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+236.488 313.355 lineto
+242.149 286.146 lineto
+closepath fill
+
+[290.088 289.449 272.386 292.083 296.061 291.974] [0.964706 0.964706 0] [1 1 0] [1 1 0] gouraudtriangle
+newpath
+1 1 0 setrgbcolor
+289.449 296.061 moveto
+288.432 300.044 lineto
+271.369 295.958 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+204.311 303.072 moveto
+203.18 298.779 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+250.498 259.579 moveto
+252.843 260.468 lineto
+252.704 260.434 lineto
+closepath fill
+
+[273.243 290.306 273.025 284.296 288.382 287.997] [0.862745 0.862745 0] [0.862745 0.862745 0] [0.964706 0.964706 0] gouraudtriangle
+[270.043 287.106 268.5 299.675 303.762 302.874] [1 1 0] [1 1 0] [0.964706 0.964706 0] gouraudtriangle
+newpath
+0.4 0.4 0.4 setrgbcolor
+236.82 313.435 moveto
+242.482 286.225 lineto
+236.82 313.435 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+250.156 259.824 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+204.311 279.583 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+206.111 272.536 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+252.843 260.468 moveto
+244.836 286.789 lineto
+252.843 260.468 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+241.767 312.999 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+248.143 259.016 moveto
+250.488 259.904 lineto
+250.156 259.824 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+203.18 286.62 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 255.944 moveto
+217.048 253.189 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+208.456 265.958 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+254.504 263.116 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+241.767 312.999 moveto
+239.036 313.965 lineto
+244.698 286.756 lineto
+closepath fill
+
+[273.025 290.088 272.386 287.997 292.083 291.974] [0.964706 0.964706 0] [0.964706 0.964706 0] [1 1 0] gouraudtriangle
+newpath
+1 1 0 setrgbcolor
+271.369 295.958 moveto
+288.432 300.044 lineto
+270.043 299.675 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+250.488 259.904 moveto
+242.482 286.225 lineto
+250.488 259.904 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+204.644 303.152 moveto
+214.45 279.512 lineto
+204.644 303.152 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+239.219 312.389 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+1 1 0 setrgbcolor
+272.386 291.974 moveto
+289.449 296.061 lineto
+271.369 295.958 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+202.794 293.168 lineto
+214.117 279.432 lineto
+closepath fill
+
+[241.905 239.175 239.036 313.033 313.999 313.965] [0.364706 0.72549 0.72549] [0.286275 0.568627 0.568627] [0.286275 0.568627 0.568627] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+251.955 262.506 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+239.219 312.389 moveto
+236.488 313.355 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+211.187 260.299 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+244.698 310.245 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+252.704 260.434 moveto
+254.504 263.116 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+217.38 253.269 moveto
+214.45 279.512 lineto
+217.38 253.269 lineto
+closepath fill
+
+[239.551 236.82 236.488 312.469 313.435 313.355] [0.72549 0.72549 0.72549] [0.568627 0.568627 0.568627] [0.568627 0.568627 0.568627] gouraudtriangle
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+255.635 267.409 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+203.18 298.779 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+241.905 313.033 moveto
+244.836 286.789 lineto
+241.905 313.033 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+242.149 309.634 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+250.156 259.824 moveto
+251.955 262.506 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+206.111 305.754 moveto
+204.311 303.072 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+214.117 255.944 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+253.086 266.799 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+247.628 305.889 lineto
+244.698 286.756 lineto
+closepath fill
+
+[252.704 252.843 254.504 260.434 260.468 263.116] [0.2 0.4 0.4] [0.2 0.4 0.4] [0.286275 0.568627 0.568627] gouraudtriangle
+[241.767 241.905 239.036 312.999 313.033 313.965] [0.364706 0.72549 0.72549] [0.364706 0.72549 0.72549] [0.286275 0.568627 0.568627] gouraudtriangle
+newpath
+0.4 0.4 0.4 setrgbcolor
+239.551 312.469 moveto
+242.482 286.225 lineto
+239.551 312.469 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+256.021 273.021 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+254.642 263.15 moveto
+244.836 286.789 lineto
+254.642 263.15 lineto
+closepath fill
+
+[250.156 250.488 251.955 259.824 259.904 262.506] [0.4 0.4 0.4] [0.4 0.4 0.4] [0.568627 0.568627 0.568627] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+245.08 305.279 lineto
+242.149 286.146 lineto
+closepath fill
+
+[239.219 239.551 236.488 312.389 312.469 313.355] [0.72549 0.72549 0.72549] [0.72549 0.72549 0.72549] [0.568627 0.568627 0.568627] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+217.048 253.189 moveto
+219.779 252.223 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+204.311 303.072 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+250.359 300.23 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 310.245 moveto
+241.767 312.999 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+253.472 272.41 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+255.635 279.568 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+252.288 262.586 moveto
+242.482 286.225 lineto
+252.288 262.586 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+206.443 305.833 moveto
+214.45 279.512 lineto
+206.443 305.833 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+217.048 253.189 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+252.704 293.653 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+244.698 286.756 moveto
+254.504 286.605 lineto
+244.698 286.756 lineto
+closepath fill
+
+[252.843 254.642 254.504 260.468 263.15 263.116] [0.2 0.4 0.4] [0.286275 0.568627 0.568627] [0.286275 0.568627 0.568627] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+247.811 299.62 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 309.634 moveto
+239.219 312.389 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+253.086 278.958 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+254.504 263.116 moveto
+255.635 267.409 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+250.156 293.042 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+242.149 286.146 moveto
+251.955 285.995 lineto
+242.149 286.146 lineto
+closepath fill
+
+[250.488 252.288 251.955 259.904 262.586 262.506] [0.4 0.4 0.4] [0.568627 0.568627 0.568627] [0.568627 0.568627 0.568627] gouraudtriangle
+newpath
+0.4 0.4 0.4 setrgbcolor
+220.111 252.302 moveto
+214.45 279.512 lineto
+220.111 252.302 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+206.111 305.754 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+244.836 310.278 moveto
+244.836 286.789 lineto
+244.836 310.278 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+251.955 262.506 moveto
+253.086 266.799 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+219.779 252.223 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+208.456 306.642 moveto
+206.111 305.754 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+242.482 309.714 moveto
+242.482 286.225 lineto
+242.482 309.714 lineto
+closepath fill
+
+[244.836 241.905 241.767 310.278 313.033 312.999] [0.431373 0.862745 0.862745] [0.364706 0.72549 0.72549] [0.364706 0.72549 0.72549] gouraudtriangle
+newpath
+0.2 0.4 0.4 setrgbcolor
+255.773 267.442 moveto
+244.836 286.789 lineto
+255.773 267.442 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+219.779 252.223 moveto
+220.111 252.302 lineto
+222.124 253.111 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+247.628 305.889 moveto
+244.698 310.245 lineto
+244.698 286.756 lineto
+closepath fill
+
+[242.482 239.551 239.219 309.714 312.469 312.389] [0.862745 0.862745 0.862745] [0.72549 0.72549 0.72549] [0.72549 0.72549 0.72549] gouraudtriangle
+newpath
+0.4 0.4 0.4 setrgbcolor
+253.419 266.879 moveto
+242.482 286.225 lineto
+253.419 266.879 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+219.779 252.223 moveto
+222.124 253.111 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+208.456 306.642 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+245.08 305.279 moveto
+242.149 309.634 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+255.635 267.409 moveto
+256.021 273.021 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+208.788 306.722 moveto
+214.45 279.512 lineto
+208.788 306.722 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+222.124 253.111 lineto
+214.117 279.432 lineto
+closepath fill
+
+[254.504 254.642 255.635 263.116 263.15 267.409] [0.286275 0.568627 0.568627] [0.286275 0.568627 0.568627] [0.364706 0.72549 0.72549] gouraudtriangle
+[244.698 244.836 241.767 310.245 310.278 312.999] [0.431373 0.862745 0.862745] [0.431373 0.862745 0.862745] [0.364706 0.72549 0.72549] gouraudtriangle
+newpath
+0.2 0.4 0.4 setrgbcolor
+247.767 305.923 moveto
+244.836 286.789 lineto
+247.767 305.923 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+220.111 252.302 moveto
+222.456 253.191 lineto
+222.124 253.111 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+253.086 266.799 moveto
+253.472 272.41 lineto
+242.149 286.146 lineto
+closepath fill
+
+[251.955 252.288 253.086 262.506 262.586 266.799] [0.568627 0.568627 0.568627] [0.568627 0.568627 0.568627] [0.72549 0.72549 0.72549] gouraudtriangle
+[242.149 242.482 239.219 309.634 309.714 312.389] [0.862745 0.862745 0.862745] [0.862745 0.862745 0.862745] [0.72549 0.72549 0.72549] gouraudtriangle
+newpath
+0.4 0.4 0.4 setrgbcolor
+245.412 305.359 moveto
+242.482 286.225 lineto
+245.412 305.359 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+256.159 273.054 moveto
+244.836 286.789 lineto
+256.159 273.054 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+222.456 253.191 moveto
+214.45 279.512 lineto
+222.456 253.191 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+211.187 305.676 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+250.359 300.23 moveto
+247.628 305.889 lineto
+244.698 286.756 lineto
+closepath fill
+
+[254.642 255.773 255.635 263.15 267.442 267.409] [0.286275 0.568627 0.568627] [0.364706 0.72549 0.72549] [0.364706 0.72549 0.72549] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+223.923 255.793 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+253.805 272.49 moveto
+242.482 286.225 lineto
+253.805 272.49 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+211.187 305.676 moveto
+208.456 306.642 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+256.021 273.021 moveto
+255.635 279.568 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+247.811 299.62 moveto
+245.08 305.279 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+250.498 300.263 moveto
+244.836 286.789 lineto
+250.498 300.263 lineto
+closepath fill
+
+[252.288 253.419 253.086 262.586 266.879 266.799] [0.568627 0.568627 0.568627] [0.72549 0.72549 0.72549] [0.72549 0.72549 0.72549] gouraudtriangle
+[211.519 208.788 208.456 305.755 306.722 306.642] [0.72549 0.72549 0.72549] [0.568627 0.568627 0.568627] [0.568627 0.568627 0.568627] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+253.472 272.41 moveto
+253.086 278.958 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+255.773 279.601 moveto
+244.836 286.789 lineto
+255.773 279.601 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+214.117 302.921 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+252.704 293.653 moveto
+250.359 300.23 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+222.124 253.111 moveto
+223.923 255.793 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+248.143 299.699 moveto
+242.482 286.225 lineto
+248.143 299.699 lineto
+closepath fill
+
+[247.767 244.836 244.698 305.923 310.278 310.245] [0.482353 0.964706 0.964706] [0.431373 0.862745 0.862745] [0.431373 0.862745 0.862745] gouraudtriangle
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+255.635 279.568 moveto
+254.504 286.605 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+225.054 260.086 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+252.843 293.686 moveto
+244.836 286.789 lineto
+252.843 293.686 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+253.419 279.037 moveto
+242.482 286.225 lineto
+253.419 279.037 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+211.519 305.755 moveto
+214.45 279.512 lineto
+211.519 305.755 lineto
+closepath fill
+
+newpath
+0.431373 0.862745 0.862745 setrgbcolor
+254.504 286.605 moveto
+252.704 293.653 lineto
+244.698 286.756 lineto
+closepath fill
+
+newpath
+0.2 0.4 0.4 setrgbcolor
+254.642 286.638 moveto
+244.836 286.789 lineto
+254.642 286.638 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+250.156 293.042 moveto
+247.811 299.62 lineto
+242.149 286.146 lineto
+closepath fill
+
+[245.412 242.482 242.149 305.359 309.714 309.634] [0.964706 0.964706 0.964706] [0.862745 0.862745 0.862745] [0.862745 0.862745 0.862745] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+253.086 278.958 moveto
+251.955 285.995 lineto
+242.149 286.146 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+250.488 293.122 moveto
+242.482 286.225 lineto
+250.488 293.122 lineto
+closepath fill
+
+[222.124 222.456 223.923 253.111 253.191 255.793] [0.4 0.4 0.4] [0.4 0.4 0.4] [0.568627 0.568627 0.568627] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+217.048 298.566 lineto
+214.117 279.432 lineto
+closepath fill
+
+[211.187 211.519 208.456 305.676 305.755 306.642] [0.72549 0.72549 0.72549] [0.72549 0.72549 0.72549] [0.568627 0.568627 0.568627] gouraudtriangle
+newpath
+0.4 0.4 0.4 setrgbcolor
+252.288 286.074 moveto
+242.482 286.225 lineto
+252.288 286.074 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+251.955 285.995 moveto
+250.156 293.042 lineto
+242.149 286.146 lineto
+closepath fill
+
+[255.635 255.773 256.021 267.409 267.442 273.021] [0.364706 0.72549 0.72549] [0.364706 0.72549 0.72549] [0.431373 0.862745 0.862745] gouraudtriangle
+[247.628 247.767 244.698 305.889 305.923 310.245] [0.482353 0.964706 0.964706] [0.482353 0.964706 0.964706] [0.431373 0.862745 0.862745] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+225.44 265.697 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+224.256 255.872 moveto
+214.45 279.512 lineto
+224.256 255.872 lineto
+closepath fill
+
+[253.086 253.419 253.472 266.799 266.879 272.41] [0.72549 0.72549 0.72549] [0.72549 0.72549 0.72549] [0.862745 0.862745 0.862745] gouraudtriangle
+[245.08 245.412 242.149 305.279 305.359 309.634] [0.964706 0.964706 0.964706] [0.964706 0.964706 0.964706] [0.862745 0.862745 0.862745] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+219.779 292.907 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 302.921 moveto
+211.187 305.676 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+225.054 272.244 lineto
+214.117 279.432 lineto
+closepath fill
+
+[255.773 256.159 256.021 267.442 273.054 273.021] [0.364706 0.72549 0.72549] [0.431373 0.862745 0.862745] [0.431373 0.862745 0.862745] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+222.124 286.329 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+214.117 279.432 moveto
+223.923 279.282 lineto
+214.117 279.432 lineto
+closepath fill
+
+[222.456 224.256 223.923 253.191 255.872 255.793] [0.4 0.4 0.4] [0.568627 0.568627 0.568627] [0.568627 0.568627 0.568627] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+223.923 255.793 moveto
+225.054 260.086 lineto
+214.117 279.432 lineto
+closepath fill
+
+[253.419 253.805 253.472 266.879 272.49 272.41] [0.72549 0.72549 0.72549] [0.862745 0.862745 0.862745] [0.862745 0.862745 0.862745] gouraudtriangle
+[250.498 247.767 247.628 300.263 305.923 305.889] [0.513726 1 1] [0.482353 0.964706 0.964706] [0.482353 0.964706 0.964706] gouraudtriangle
+newpath
+0.4 0.4 0.4 setrgbcolor
+214.45 303.001 moveto
+214.45 279.512 lineto
+214.45 303.001 lineto
+closepath fill
+
+1 1 1 setrgbcolor
+0 575.423 moveto
+0 546.287 lineto stroke
+[248.143 245.412 245.08 299.699 305.359 305.279] [1 1 1] [0.964706 0.964706 0.964706] [0.964706 0.964706 0.964706] gouraudtriangle
+[214.45 211.519 211.187 303.001 305.755 305.676] [0.862745 0.862745 0.862745] [0.72549 0.72549 0.72549] [0.72549 0.72549 0.72549] gouraudtriangle
+[256.021 256.159 255.635 273.021 273.054 279.568] [0.431373 0.862745 0.862745] [0.431373 0.862745 0.862745] [0.482353 0.964706 0.964706] gouraudtriangle
+[250.359 250.498 247.628 300.23 300.263 305.889] [0.513726 1 1] [0.513726 1 1] [0.482353 0.964706 0.964706] gouraudtriangle
+newpath
+0.4 0.4 0.4 setrgbcolor
+225.387 260.165 moveto
+214.45 279.512 lineto
+225.387 260.165 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+217.048 298.566 moveto
+214.117 302.921 lineto
+214.117 279.432 lineto
+closepath fill
+
+0 0 1 setrgbcolor
+151.53 264.444 moveto
+214.117 279.432 lineto stroke
+[253.472 253.805 253.086 272.41 272.49 278.958] [0.862745 0.862745 0.862745] [0.862745 0.862745 0.862745] [0.964706 0.964706 0.964706] gouraudtriangle
+[247.811 248.143 245.08 299.62 299.699 305.279] [1 1 1] [1 1 1] [0.964706 0.964706 0.964706] gouraudtriangle
+[256.159 255.773 255.635 273.054 279.601 279.568] [0.431373 0.862745 0.862745] [0.482353 0.964706 0.964706] [0.482353 0.964706 0.964706] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+225.054 260.086 moveto
+225.44 265.697 lineto
+214.117 279.432 lineto
+closepath fill
+
+[252.843 250.498 250.359 293.686 300.263 300.23] [0.52549 1 1] [0.513726 1 1] [0.513726 1 1] gouraudtriangle
+[223.923 224.256 225.054 255.793 255.872 260.086] [0.568627 0.568627 0.568627] [0.568627 0.568627 0.568627] [0.72549 0.72549 0.72549] gouraudtriangle
+[214.117 214.45 211.187 302.921 303.001 305.676] [0.862745 0.862745 0.862745] [0.862745 0.862745 0.862745] [0.72549 0.72549 0.72549] gouraudtriangle
+[253.805 253.419 253.086 272.49 279.037 278.958] [0.862745 0.862745 0.862745] [0.964706 0.964706 0.964706] [0.964706 0.964706 0.964706] gouraudtriangle
+newpath
+0.4 0.4 0.4 setrgbcolor
+217.38 298.645 moveto
+214.45 279.512 lineto
+217.38 298.645 lineto
+closepath fill
+
+[255.635 255.773 254.504 279.568 279.601 286.605] [0.482353 0.964706 0.964706] [0.482353 0.964706 0.964706] [0.513726 1 1] gouraudtriangle
+[252.704 252.843 250.359 293.653 293.686 300.23] [0.52549 1 1] [0.52549 1 1] [0.513726 1 1] gouraudtriangle
+newpath
+1 1 1 setrgbcolor
+250.488 293.122 moveto
+248.143 299.699 lineto
+247.811 299.62 lineto
+closepath fill
+
+[255.773 254.642 254.504 279.601 286.638 286.605] [0.482353 0.964706 0.964706] [0.513726 1 1] [0.513726 1 1] gouraudtriangle
+newpath
+0.4 0.4 0.4 setrgbcolor
+225.773 265.777 moveto
+214.45 279.512 lineto
+225.773 265.777 lineto
+closepath fill
+
+[254.642 252.843 252.704 286.638 293.686 293.653] [0.513726 1 1] [0.52549 1 1] [0.52549 1 1] gouraudtriangle
+[254.504 254.642 252.704 286.605 286.638 293.653] [0.513726 1 1] [0.513726 1 1] [0.52549 1 1] gouraudtriangle
+[253.086 253.419 251.955 278.958 279.037 285.995] [0.964706 0.964706 0.964706] [0.964706 0.964706 0.964706] [1 1 1] gouraudtriangle
+newpath
+1 1 1 setrgbcolor
+250.156 293.042 moveto
+250.488 293.122 lineto
+247.811 299.62 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+219.779 292.907 moveto
+217.048 298.566 lineto
+214.117 279.432 lineto
+closepath fill
+
+[224.256 225.387 225.054 255.872 260.165 260.086] [0.568627 0.568627 0.568627] [0.72549 0.72549 0.72549] [0.72549 0.72549 0.72549] gouraudtriangle
+[253.419 252.288 251.955 279.037 286.074 285.995] [0.964706 0.964706 0.964706] [1 1 1] [1 1 1] gouraudtriangle
+newpath
+1 1 1 setrgbcolor
+252.288 286.074 moveto
+250.488 293.122 lineto
+250.156 293.042 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+225.44 265.697 moveto
+225.054 272.244 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+1 1 1 setrgbcolor
+251.955 285.995 moveto
+252.288 286.074 lineto
+250.156 293.042 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+220.111 292.986 moveto
+214.45 279.512 lineto
+220.111 292.986 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+225.387 272.324 moveto
+214.45 279.512 lineto
+225.387 272.324 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+222.124 286.329 moveto
+219.779 292.907 lineto
+214.117 279.432 lineto
+closepath fill
+
+[217.38 214.45 214.117 298.645 303.001 302.921] [0.964706 0.964706 0.964706] [0.862745 0.862745 0.862745] [0.862745 0.862745 0.862745] gouraudtriangle
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+225.054 272.244 moveto
+223.923 279.282 lineto
+214.117 279.432 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+222.456 286.409 moveto
+214.45 279.512 lineto
+222.456 286.409 lineto
+closepath fill
+
+newpath
+0.4 0.4 0.4 setrgbcolor
+224.256 279.361 moveto
+214.45 279.512 lineto
+224.256 279.361 lineto
+closepath fill
+
+newpath
+0.862745 0.862745 0.862745 setrgbcolor
+223.923 279.282 moveto
+222.124 286.329 lineto
+214.117 279.432 lineto
+closepath fill
+
+[225.054 225.387 225.44 260.086 260.165 265.697] [0.72549 0.72549 0.72549] [0.72549 0.72549 0.72549] [0.862745 0.862745 0.862745] gouraudtriangle
+[217.048 217.38 214.117 298.566 298.645 302.921] [0.964706 0.964706 0.964706] [0.964706 0.964706 0.964706] [0.862745 0.862745 0.862745] gouraudtriangle
+[225.387 225.773 225.44 260.165 265.777 265.697] [0.72549 0.72549 0.72549] [0.862745 0.862745 0.862745] [0.862745 0.862745 0.862745] gouraudtriangle
+[220.111 217.38 217.048 292.986 298.645 298.566] [1 1 1] [0.964706 0.964706 0.964706] [0.964706 0.964706 0.964706] gouraudtriangle
+[225.44 225.773 225.054 265.697 265.777 272.244] [0.862745 0.862745 0.862745] [0.862745 0.862745 0.862745] [0.964706 0.964706 0.964706] gouraudtriangle
+[219.779 220.111 217.048 292.907 292.986 298.566] [1 1 1] [1 1 1] [0.964706 0.964706 0.964706] gouraudtriangle
+[225.773 225.387 225.054 265.777 272.324 272.244] [0.862745 0.862745 0.862745] [0.964706 0.964706 0.964706] [0.964706 0.964706 0.964706] gouraudtriangle
+newpath
+1 1 1 setrgbcolor
+222.456 286.409 moveto
+220.111 292.986 lineto
+219.779 292.907 lineto
+closepath fill
+
+[225.054 225.387 223.923 272.244 272.324 279.282] [0.964706 0.964706 0.964706] [0.964706 0.964706 0.964706] [1 1 1] gouraudtriangle
+newpath
+1 1 1 setrgbcolor
+222.124 286.329 moveto
+222.456 286.409 lineto
+219.779 292.907 lineto
+closepath fill
+
+[225.387 224.256 223.923 272.324 279.361 279.282] [0.964706 0.964706 0.964706] [1 1 1] [1 1 1] gouraudtriangle
+newpath
+1 1 1 setrgbcolor
+224.256 279.361 moveto
+222.456 286.409 lineto
+222.124 286.329 lineto
+closepath fill
+
+newpath
+1 1 1 setrgbcolor
+223.923 279.282 moveto
+224.256 279.361 lineto
+222.124 286.329 lineto
+closepath fill
+
+1 1 1 setrgbcolor
+600 462.214 moveto
+600 53.713 lineto stroke
+1 1 1 setrgbcolor
+113.587 0 moveto
+176.864 0 lineto stroke
+1 1 1 setrgbcolor
+176.864 0 moveto
+497.375 0 lineto stroke
+1 1 1 setrgbcolor
+600 24.5773 moveto
+600 433.078 lineto stroke
+1 1 1 setrgbcolor
+600 433.078 moveto
+600 462.214 lineto stroke
+grestore
+
+showpage

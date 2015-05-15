@@ -1,0 +1,168 @@
+##G4.PRIM-FORMAT-2.4
+/BoundingBox       -346.410162       -346.410162       -346.410162        346.410162        346.410162        346.410162
+!SetCamera
+!OpenDevice
+!BeginModeling
+#--------------------
+#/PVName     World.0
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0                 0
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Box               200               200               200
+#--------------------
+#/PVName          det1.0
+/Ndiv  24
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0                 0
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Cons                 0          53.2215                0               23          77.5125                0       6.28318531
+#--------------------
+#/PVName               outerCase.0
+/Ndiv  24
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0          -13.8625
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Cons           52.2215          53.2215               23               24            63.65                0       6.28318531
+#--------------------
+#/PVName               sensitiveVol.0
+/Ndiv  24
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0          -13.8625
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Cons                 0          52.2215                0               23            63.65                0       6.28318531
+#--------------------
+#/PVName                    innerCase.0
+/Ndiv  24
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0          -25.7125
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Cons           49.1715          49.9715          22.1755          22.9755          55.5125                0       6.28318531
+#--------------------
+#/PVName                    tracker1.1
+/Ndiv  24
+/ColorRGB                 1                 1                 0
+/ForceWireframe  0
+/Origin                 0                 0            22.225
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Tubs                 0                13               7.7                 0        6.28318531
+#--------------------
+#/PVName                    cladding1.0
+/Ndiv  24
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0            22.225
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Tubs                13                16               7.7                 0        6.28318531
+#--------------------
+#/PVName                    tracker2.2
+/Ndiv  24
+/ColorRGB                 1                 1                 0
+/ForceWireframe  0
+/Origin                 0                 0             4.875
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Tubs                 0                17              7.65                 0        6.28318531
+#--------------------
+#/PVName                    cladding2.0
+/Ndiv  24
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0             4.875
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Tubs                17                20              7.65                 0        6.28318531
+#--------------------
+#/PVName                    tracker3.3
+/Ndiv  24
+/ColorRGB                 1                 1                 0
+/ForceWireframe  0
+/Origin                 0                 0           -14.825
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Tubs                 0                21             10.05                 0        6.28318531
+#--------------------
+#/PVName                    cladding3.0
+/Ndiv  24
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0           -14.825
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Tubs                21             24.25             10.05                 0        6.28318531
+#--------------------
+#/PVName                    tracker4.4
+/Ndiv  24
+/ColorRGB                 1                 1                 0
+/ForceWireframe  0
+/Origin                 0                 0           -36.925
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Tubs                 0                26             10.05                 0        6.28318531
+#--------------------
+#/PVName                    cladding4.0
+/Ndiv  24
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0           -36.925
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Tubs                26             29.25             10.05                 0        6.28318531
+#--------------------
+#/PVName                    tracker5.5
+/Ndiv  24
+/ColorRGB                 1                 1                 0
+/ForceWireframe  0
+/Origin                 0                 0           -59.025
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Tubs                 0                30             10.05                 0        6.28318531
+#--------------------
+#/PVName                    cladding5.0
+/Ndiv  24
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0           -59.025
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Tubs                30              33.5             10.05                 0        6.28318531
+#--------------------
+#/PVName                    tracker6.6
+/Ndiv  24
+/ColorRGB                 1                 1                 0
+/ForceWireframe  0
+/Origin                 0                 0           -81.225
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Tubs                 0                35             10.15                 0        6.28318531
+#--------------------
+#/PVName                    cladding6.0
+/Ndiv  24
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0           -81.225
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Tubs                35             38.25             10.15                 0        6.28318531
+#--------------------
+#/PVName               frontSi.7
+/Ndiv  24
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0           77.3625
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Tubs                 0                23              0.15                 0        6.28318531
+#--------------------
+#/PVName               backSi.8
+/Ndiv  24
+/ColorRGB                 1                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0           52.0625
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Tubs                 0                23              0.15                 0        6.28318531
+#--------------------
+#/PVName               window.0
+/Ndiv  24
+/ColorRGB               0.5                 1                 1
+/ForceWireframe  0
+/Origin                 0                 0             49.85
+/BaseVector                 1                 0                 0                 0                 1                 0
+/Tubs                 0                23            0.0625                 0        6.28318531
+#--------------------
+!EndModeling
+!DrawAll
+!CloseDevice

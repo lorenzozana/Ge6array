@@ -1,0 +1,720 @@
+
+ 
+#include "GeDetDetectorConstruction.hh"
+#include "GeDetDetectorMessenger.hh"
+#include "GeDetChamberParameterisation.hh"
+#include "GeDetTrackerSD.hh"
+
+#include "G4Material.hh"
+
+#include "G4Cons.hh"
+#include "G4Tubs.hh"
+#include "G4Box.hh"
+#include "G4LogicalVolume.hh"
+#include "G4PVPlacement.hh"
+#include "G4PVParameterised.hh"
+#include "G4SDManager.hh"
+
+#include "G4UserLimits.hh"
+
+#include "G4VisAttributes.hh"
+#include "G4Colour.hh"
+
+#include "G4ios.hh"
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+GeDetDetectorConstruction::GeDetDetectorConstruction()
+  :solidWorld(0),  logicWorld(0),  physiWorld(0),
+   solidTarget(0), logicTarget(0), physiTarget(0), 
+   solidTracker(0),
+  
+   logicDet1(0),
+   logicSensitiveVol(0),
+
+ logicInnerCase(0),
+ logicOuterCase(0),
+ 
+   logicTracker1(0),logicTracker2(0),logicTracker3(0),logicTracker4(0),logicTracker5(0),logicTracker6(0),
+   logicWindow(0),
+   logicFrontSi(0),
+   logicBackSi(0),
+//    logicBackAir(0),
+//    logicFrontAir(0),
+   
+//    logicTracker21(0),logicTracker22(0),logicTracker23(0),logicTracker24(0),logicTracker25(0),logicTracker26(0),
+//    logicWindow2(0),
+//    logicFrontSi2(0),
+//    logicBackSi2(0),
+
+   solidChamber(0),logicChamber(0),physiChamber(0), 
+   TargetMater(0), ChamberMater(0),
+   fWorldLength(0.),  fTargetLength(0.), fTrackerLength(0.),
+   NbOfChambers(0) ,  ChamberWidth(0.),  ChamberSpacing(0.)
+{
+  ///  fpMagField = new GeDetMagneticField();
+  detectorMessenger = new GeDetDetectorMessenger(this);
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+GeDetDetectorConstruction::~GeDetDetectorConstruction()
+{
+
+  delete detectorMessenger;            
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+G4VPhysicalVolume* GeDetDetectorConstruction::Construct()
+{
+  //--------- Material definition ---------
+  
+  G4double a, z;
+  G4double density;
+  G4double temperature;
+  G4double pressure;
+  G4int nel;
+
+ //Steel
+  G4Element* C = new G4Element("Carbon", "C", z=6., a= 12.01 *g/mole);
+  G4Element* Fe = new G4Element("Iron"  , "Fe", z=26., a= 55.845 *g/mole);
+  
+  G4Material* Steel = new G4Material("Steel", density= 7.81 *g/cm3, nel=2);
+  Steel->AddElement(Fe, 99*perCent);
+  Steel->AddElement(C, 1*perCent);
+
+ //Air
+  G4Element* N = new G4Element("Nitrogen", "N", z=7., a= 14.01*g/mole);
+  G4Element* O = new G4Element("Oxygen"  , "O", z=8., a= 16.00*g/mole);
+  
+  G4Material* Air = new G4Material("Air", density= 1.29*mg/cm3, nel=2);
+  Air->AddElement(N, 70*perCent);
+  Air->AddElement(O, 30*perCent);
+
+  G4Material* Germanium = new G4Material("Germanium",				//its name
+					 z=32, 				//atomic number
+					 a= 72.64 *g/mole,					//mass of mole
+					 density = 5.323*g/cm3, 				//density
+					 kStateSolid,	//solid,gas
+					 temperature = 77. *kelvin,	//temperature
+					 pressure = 1 *atmosphere);		//pressure
+  
+  //Germanium
+//   G4Material* Germanium = 
+//     new G4Material("Germanium", z= 32., a= 72.64*g/mole, density= 5.323*g/cm3);
+  
+  //Berylium
+  G4Material* Beryllium = 
+    new G4Material("Beryllium", z= 4., a=9.012*g/mole, density=1.85 *g/cm3);
+  
+  //Silicon
+  G4Material* Silicon = 
+    new G4Material("Silicon", z= 14., a=28.086*g/mole,density=2.3296 *g/cm3);
+
+  //Ceramic cladding
+//   G4Material* Ceramic = 
+//     new G4Material("Ceramic", z= 50., a=100.086*g/mole,density=10.3296 *g/cm3);
+  G4Material* Ceramic = Germanium;
+  
+  // What about vacuum ?  Vacuum is an ordinary gas with very low density
+  //
+  
+  density     = universe_mean_density;                //from PhysicalConstants.h
+  pressure    = 1.e-19*pascal;
+  temperature = 77.*kelvin;
+  G4Material* Galactic = 
+    new G4Material("Galactic", z=1., a=1.01*g/mole, density,
+                   kStateGas,temperature,pressure);
+  
+  
+  // Print all the materials defined.
+  //
+  G4cout << G4endl << "The materials defined are : " << G4endl << G4endl;
+  G4cout << *(G4Material::GetMaterialTable()) << G4endl;
+  
+  //--------- Sizes of the principal geometrical components (solids)  ---------
+  
+  //------------------------------ 
+  // World
+  //------------------------------ 
+  
+  G4double HalfWorldLength = 200*mm;
+  
+  solidWorld= new G4Box("world",HalfWorldLength,HalfWorldLength,HalfWorldLength);
+  logicWorld= new G4LogicalVolume( solidWorld, Air, "World", 0, 0, 0);
+  physiWorld = new G4PVPlacement(0,               // no rotation
+                                 G4ThreeVector(), // at (0,0,0)
+                                 logicWorld,      // its logical volume
+				 "World",         // its name
+                                 0,               // its mother  volume
+                                 false,           // no boolean operations
+                                 0);              // copy number
+  
+  
+
+  //Defining the size of the materials
+
+  G4double frontSiHeight = 0.15 *mm;
+  G4double frontAirHeight = 12.5*mm; 
+  G4double backSiHeight = 0.15 *mm;
+  G4double backAirHeight = 1.*mm;
+  G4double BeHeight = 0.0625 *mm;
+  G4double tube1Height = 7.7 *mm;
+  G4double tube2Height = 7.65 *mm;
+  G4double tube3Height = 10.05 *mm; 
+  G4double tube4Height = 10.05 *mm;
+  G4double tube5Height = 10.05 *mm;
+  G4double tube6Height = 10.15 *mm;
+  G4double space = 2. *mm;
+
+  G4double innerCaseHeight = 111.025 *mm;
+  G4double outerCaseHeight = 127.3 *mm;
+  
+  G4double det1XRot = 0. *deg;
+ G4double det2XRot = 60. *deg;
+ G4double det3XRot = 120. *deg;
+ G4double det4XRot = 180. *deg;
+ G4double det5XRot = 240. *deg;
+
+
+ G4double DetHeight =2*(tube6Height+ tube5Height + tube4Height + tube3Height  + tube2Height + tube1Height + BeHeight + backSiHeight + frontSiHeight) + (43 *mm);
+
+  //------------ 
+  //  Detector 1:
+  //-------------
+
+  G4Cons* det1 = new G4Cons("det1",
+			    0. *mm,
+			    53.2215 *mm,
+			    0. *mm,
+			    23. *mm,
+			    0.5*DetHeight,
+			    90 *deg,
+			    360 *deg);
+  logicDet1 = new G4LogicalVolume(det1,Air,"det1",0,0,0);
+  G4VPhysicalVolume* physiDet1 =
+    new G4PVPlacement(0,                 //no rotation
+		      G4ThreeVector(0,0,0),   //at (0,0,0)
+		      logicDet1,        //its logical volume
+		      "det1",            //name
+		      logicWorld,        //mother volume
+		      false,
+		      0);
+
+  //--------------------------
+  //  Outer Casing
+  //------------------------
+
+  G4Cons* outerCase = new G4Cons("outerCase",
+				 52.2215 *mm,				
+				 53.2215 *mm,
+				 23. *mm, 
+				 24. *mm,
+				 0.5* outerCaseHeight,
+				 90 *deg,
+				 360 *deg);
+  
+  G4double outerCase_x = 0. *mm;
+  G4double outerCase_y = 0. *mm;
+  G4double outerCase_z = 0.5*( outerCaseHeight - DetHeight);
+  
+  
+  logicOuterCase = new G4LogicalVolume(outerCase, Steel,"outerCase",0,0,0);
+  G4VPhysicalVolume* physiOuterCase = 
+    new G4PVPlacement(0,
+		      G4ThreeVector(outerCase_x, outerCase_y, outerCase_z),
+		      logicOuterCase,
+		      "outerCase",
+		      logicDet1,
+		      false,
+		      0);
+
+  //---------------------------------
+  // The sensitive bit in the detector
+  //-----------------------------------
+  G4Cons* sensitiveVol = new G4Cons("sensitiveVol",
+				    0. *mm,				
+				    52.2215 *mm,				
+				    0. *mm, 
+				    23. *mm,
+				    (0.5* outerCaseHeight) ,
+				    90 *deg,
+				    360 *deg);
+  
+  G4double sensitiveVol_x = 0. *mm;
+  G4double sensitiveVol_y = 0. *mm;
+  G4double sensitiveVol_z = 0.5*( outerCaseHeight - DetHeight) ;
+  
+  
+  logicSensitiveVol = new G4LogicalVolume(sensitiveVol, Galactic,"sensitiveVol",0,0,0);
+  G4VPhysicalVolume* physiSensitiveVol = 
+    new G4PVPlacement(0,
+		      G4ThreeVector(sensitiveVol_x,sensitiveVol_y,sensitiveVol_z),
+		      logicSensitiveVol,
+		      "sensitiveVol",
+		      logicDet1,
+		      false,
+		      0);
+
+
+//   G4Box*  box =
+//     new G4Box("Box",20*mm,30*mm,40*mm);
+//   G4Tubs* cyl =
+//     new G4Tubs("Cylinder",0,50*mm,50*mm,0,twopi);  // r:     0 mm -> 50 mm
+//                                                    // z:   -50 mm -> 50 mm
+//                                                    // phi:   0 ->  2 pi
+//   G4UnionSolid* union =
+//     new G4UnionSolid("Box+Cylinder", box, cyl); 
+//   G4IntersectionSolid* intersection =
+//     new G4IntersectionSolid("Box*Cylinder", box, cyl); 
+//   G4SubtractionSolid* subtraction =
+//     new G4SubtractionSolid("Box-Cylinder", box, cyl);
+
+
+
+
+  //--------------------------
+  //  Inner Casing
+  //------------------------
+
+  G4Cons* innerCase = new G4Cons("innerCase",
+				 49.1715 *mm,
+				 49.9715 *mm,
+				 22.1755 *mm, 
+				 22.9755 *mm,
+				 0.5* innerCaseHeight,
+				 90 *deg,
+				 360 *deg);
+  
+  G4double innerCase_x = 0. *mm;
+  G4double innerCase_y = 0. *mm;
+  G4double innerCase_z = tube6Height - 0.5*( DetHeight - innerCaseHeight);
+  
+  
+  logicInnerCase = new G4LogicalVolume(innerCase, Steel,"innerCase",0,0,0);
+  G4VPhysicalVolume* physiInnerCase = 
+    new G4PVPlacement(0,
+		      G4ThreeVector(innerCase_x, innerCase_y, innerCase_z),
+		      logicInnerCase,
+		      "innerCase",
+		      logicSensitiveVol,
+		      false,
+		      0);
+
+			   
+ //------------------------------------
+  // Front silicon detector 1
+  //-----------------------------------
+  
+  G4Tubs* frontSi = new G4Tubs("frontSi",
+			       0. *mm,
+			       23. *mm, 
+			       frontSiHeight,
+			       0. *deg, 
+			       360. *deg);
+  
+  logicFrontSi = new G4LogicalVolume(frontSi,Silicon,"frontSi",0,0,0);
+  
+  G4double frontSiPos_x1 = 0.*m;
+  G4double frontSiPos_y1 = 0.*m;
+  G4double frontSiPos_z1 = tube6Height + 2*(tube5Height + tube4Height + tube3Height  + tube2Height + tube1Height + BeHeight + backAirHeight + backSiHeight + frontAirHeight)  + frontSiHeight+ (6 *mm)+(5*space)+(tube6Height - 0.5*DetHeight);
+ 
+  G4VPhysicalVolume* physiFrontSi=  
+    new G4PVPlacement(0,
+		      G4ThreeVector(frontSiPos_x1,frontSiPos_y1,frontSiPos_z1),
+		      logicFrontSi ,
+		      "frontSi",
+		      logicDet1,
+		      false,
+		      7);
+
+  
+  //------------------------------------
+  // Back silicon detector
+  //-----------------------------------
+  
+  G4Tubs* backSi = new G4Tubs("backSi",
+			      0. *mm,
+			      23. *mm, 
+			      backSiHeight,
+			      0. *deg, 
+			      360. *deg);
+  
+  logicBackSi = new G4LogicalVolume(backSi,Silicon,"backSi",0,0,0);
+  G4double backSiPos_x1 = 0.*m;
+  G4double backSiPos_y1 = 0.*m;
+  G4double backSiPos_z1 =  tube6Height + 2*( tube5Height + tube4Height  + tube3Height + tube2Height + tube1Height + BeHeight + backAirHeight) + backSiHeight + (6. *mm)+(5*space) + (tube6Height - 0.5*DetHeight);
+  G4VPhysicalVolume* physiBackSi=  
+    new G4PVPlacement(0,
+		      G4ThreeVector(backSiPos_x1,backSiPos_y1,backSiPos_z1),
+		      logicBackSi ,
+		      "backSi",
+		      logicDet1 ,
+		      false,
+		      8);
+   
+
+  
+  //------------------------------------
+  // Beryllium window 
+  //-----------------------------------
+  
+  G4Tubs* window = new G4Tubs("window",
+			      0. *mm,
+			      23. *mm, 
+			      BeHeight,
+			      0. *deg, 
+			      360. *deg);
+  
+  logicWindow = new G4LogicalVolume(window,Beryllium,"window",0,0,0);
+  G4double windowPos_x1 = 0.*mm;
+  G4double windowPos_y1 = 0.*mm;
+  G4double windowPos_z1 = tube6Height + 2*(tube5Height + tube4Height + tube3Height  + tube2Height + tube1Height) + BeHeight + (6.*mm)+(5*space) + (tube6Height - 0.5*DetHeight);
+  G4VPhysicalVolume* physiWindow=  
+    new G4PVPlacement(0,
+		      G4ThreeVector(windowPos_x1,windowPos_y1,windowPos_z1),
+		      logicWindow ,
+		      "window",
+		      logicDet1 ,
+		      false,
+		      0);				 
+  
+  //------------------------------------
+  // Detector cylinder 1 (the tracker tube 1!) 1
+  //------------------------------------
+  
+  G4Tubs* tracker_tube1 = new G4Tubs("tracker_tube1",
+				     0. *mm,
+				     13. *mm, 
+				     tube1Height,
+				     0. *deg, 
+				     360. *deg);
+  
+  logicTracker1 = new G4LogicalVolume(tracker_tube1,Germanium,"tracker1",0,0,0);
+  G4double trackerPos_x1 = 0.*mm;
+  G4double trackerPos_y1 = 0.*mm;
+  G4double trackerPos_z1 = tube6Height + (2*tube5Height) + (2*tube4Height) + (2*tube3Height) + (2*tube2Height) + tube1Height + (5*space)+ (tube6Height - 0.5*DetHeight);
+  G4VPhysicalVolume* physiTracker1=  
+    new G4PVPlacement(0,
+		      G4ThreeVector(trackerPos_x1,trackerPos_y1,trackerPos_z1),
+		      logicTracker1 ,
+		      "tracker1",
+		      logicSensitiveVol ,
+		      false,
+		      1);
+
+  //Ceramic cladding:
+  G4Tubs* cladding1 = new G4Tubs("cladding1", 13 *mm,16 *mm, tube1Height, 0. *deg, 360. *deg);
+  logicCladding1 = new G4LogicalVolume(cladding1,Ceramic, "cladding1", 0,0,0);
+  
+  G4VPhysicalVolume* physiCladding1=
+    new G4PVPlacement(0,
+		      G4ThreeVector(trackerPos_x1,trackerPos_y1,trackerPos_z1),
+		      logicCladding1 ,
+		      "cladding1",
+		      logicSensitiveVol ,
+		      false,
+		      0);
+ 
+
+  
+  
+  //------------------------------------
+  // Detector cylinder 2 (the tracker tube 2!) 1
+  //------------------------------------
+  
+  G4Tubs* tracker_tube2 = new G4Tubs("tracker_tube2",
+				     0. *mm,
+				     17. *mm, 
+				     tube2Height,
+				     0. *deg, 
+				     360. *deg);
+  
+  logicTracker2 = new G4LogicalVolume(tracker_tube2,Germanium,"tracker2",0,0,0);
+  G4double trackerPos_x2 = 0. *mm;
+  G4double trackerPos_y2 = 0.*mm;
+  G4double trackerPos_z2 = tube6Height + (2*tube5Height) + (2*tube4Height)  + (2*tube3Height)  + tube2Height + (4*space)+ (tube6Height - 0.5*DetHeight) ;
+  G4VPhysicalVolume* physiTracker2=  
+    new G4PVPlacement(0,
+		      G4ThreeVector(trackerPos_x2,trackerPos_y2,trackerPos_z2),
+		      logicTracker2 ,
+		      "tracker2",
+		      logicSensitiveVol ,
+		      false,
+		      2);
+
+  //Ceramic cladding:
+  G4Tubs* cladding2 = new G4Tubs("cladding2", 17 *mm,20 *mm, tube2Height, 0. *deg, 360. *deg);
+  logicCladding2 = new G4LogicalVolume(cladding2,Ceramic, "cladding2", 0,0,0);
+  
+  G4VPhysicalVolume* physiCladding2=
+    new G4PVPlacement(0,
+		      G4ThreeVector(trackerPos_x2,trackerPos_y2,trackerPos_z2),
+		      logicCladding2 ,
+		      "cladding2",
+		      logicSensitiveVol ,
+		      false,
+		      0);
+  
+  
+  //------------------------------------
+  // Detector cylinder 3 (the tracker tube 3!) 1 
+  //------------------------------------
+  
+  G4Tubs* tracker_tube3 = new G4Tubs("tracker_tube3",
+				     0. *mm,
+				     21. *mm, 
+				     tube3Height,
+				     0. *deg, 
+				     360. *deg);
+  
+  logicTracker3 = new G4LogicalVolume(tracker_tube3,Germanium,"tracker3",0,0,0);
+  G4double trackerPos_x3 = 0. *mm;
+  G4double trackerPos_y3 = 0.*mm;
+  G4double trackerPos_z3 = tube6Height + (2*tube5Height)  + (2*tube4Height)  + tube3Height + (3*space) + (tube6Height - 0.5*DetHeight)  ;
+  G4VPhysicalVolume* physiTracker3=  
+    new G4PVPlacement(0,
+		      G4ThreeVector(trackerPos_x3,trackerPos_y3,trackerPos_z3),
+		      logicTracker3 ,
+		      "tracker3",
+		       logicSensitiveVol ,
+		      false,
+		      3);
+
+
+  //Ceramic cladding:
+  G4Tubs* cladding3 = new G4Tubs("cladding3", 21 *mm, 24.25 *mm, tube3Height, 0. *deg, 360. *deg);
+  logicCladding3 = new G4LogicalVolume(cladding3,Ceramic, "cladding3", 0,0,0);
+  
+  G4VPhysicalVolume* physiCladding3=
+    new G4PVPlacement(0,
+		      G4ThreeVector(trackerPos_x3,trackerPos_y3,trackerPos_z3),
+		      logicCladding3 ,
+		      "cladding3",
+		        logicSensitiveVol,
+		      false,
+		      0);
+  
+  
+  //------------------------------------
+  // Detector cylinder 4 (the tracker tube 4!)  1
+  //------------------------------------
+  
+  G4Tubs* tracker_tube4 = new G4Tubs("tracker_tube4",
+				     0. *mm,
+				     26. *mm, 
+				     tube4Height,
+				     0. *deg, 
+				     360. *deg);
+  
+  logicTracker4 = new G4LogicalVolume(tracker_tube4,Germanium,"tracker4",0,0,0);
+  G4double trackerPos_x4 = 0. *mm;
+  G4double trackerPos_y4 = 0.*mm;
+  G4double trackerPos_z4 = tube6Height + (2*tube5Height) + tube4Height + (2*space)+ (tube6Height - 0.5*DetHeight) ;
+  G4VPhysicalVolume* physiTracker4=  
+    new G4PVPlacement(0,
+		      G4ThreeVector(trackerPos_x4,trackerPos_y4,trackerPos_z4),
+		      logicTracker4 ,
+		      "tracker4",
+		       logicSensitiveVol,
+		      false,
+		      4);
+
+
+  //Ceramic cladding:
+  G4Tubs* cladding4 = new G4Tubs("cladding4", 26 *mm, 29.25 *mm, tube4Height, 0. *deg, 360. *deg);
+  logicCladding4 = new G4LogicalVolume(cladding4,Ceramic, "cladding4", 0,0,0);
+  
+  G4VPhysicalVolume* physiCladding4=
+    new G4PVPlacement(0,
+		      G4ThreeVector(trackerPos_x4,trackerPos_y4,trackerPos_z4),
+		      logicCladding4 ,
+		      "cladding4",
+		       logicSensitiveVol,
+		      false,
+		      0);
+
+  
+  
+  //------------------------------------
+  // Detector cylinder 5 (the tracker tube 5!)  
+  //------------------------------------
+  
+  G4Tubs* tracker_tube5 = new G4Tubs("tracker_tube5",
+				     0. *mm,
+				     30. *mm, 
+				     tube5Height,
+				     0. *deg, 
+				     360. *deg);
+  
+  logicTracker5 = new G4LogicalVolume(tracker_tube5,Germanium,"tracker5",0,0,0);
+  G4double trackerPos_x5 = 0. *mm;
+  G4double trackerPos_y5 = 0.*mm;
+  G4double trackerPos_z5 = tube6Height + space + tube5Height + (tube6Height - 0.5*DetHeight) ;
+  G4VPhysicalVolume* physiTracker5=  
+    new G4PVPlacement(0,
+		      G4ThreeVector(trackerPos_x5,trackerPos_y5,trackerPos_z5),
+		      logicTracker5 ,
+		      "tracker5",
+		       logicSensitiveVol ,
+		      false,
+		      5);
+
+
+  //Ceramic cladding:
+  G4Tubs* cladding5 = new G4Tubs("cladding5", 30 *mm, 33.5 *mm, tube5Height, 0. *deg, 360. *deg);
+  logicCladding5 = new G4LogicalVolume(cladding5,Ceramic, "cladding5", 0,0,0);
+  
+  G4VPhysicalVolume* physiCladding5=
+    new G4PVPlacement(0,
+		      G4ThreeVector(trackerPos_x5,trackerPos_y5,trackerPos_z5),
+		      logicCladding5 ,
+		      "cladding5",
+		       logicSensitiveVol,
+		      false,
+		      0);
+
+  
+  
+  //------------------------------------
+  // Detector cylinder 6 (the tracker tube 6!)
+  //------------------------------------
+  
+  G4Tubs* tracker_tube6 = new G4Tubs("tracker_tube6",
+				     0. *mm,
+				     35. *mm, 
+				     tube6Height,
+				     0. *deg, 
+				     360. *deg);
+  
+  logicTracker6 = new G4LogicalVolume(tracker_tube6,Germanium,"tracker6",0,0,0);
+  G4double trackerPos_x6 = 0. *mm;
+  G4double trackerPos_y6 = 0.*mm;
+  G4double trackerPos_z6 = (tube6Height - 0.5*DetHeight);
+  G4VPhysicalVolume* physiTracker6=  
+    new G4PVPlacement(0,
+		      G4ThreeVector(trackerPos_x6,trackerPos_y6,trackerPos_z6),
+		      logicTracker6 ,
+		      "tracker6",
+		      logicSensitiveVol,
+		      false,
+		      6);
+   
+ //Ceramic cladding:
+  G4Tubs* cladding6 = new G4Tubs("cladding6", 35 *mm,38.25 *mm, tube6Height, 0. *deg, 360. *deg);
+  logicCladding6 = new G4LogicalVolume(cladding6,Ceramic, "cladding6", 0,0,0);
+  
+  G4VPhysicalVolume* physiCladding6=
+    new G4PVPlacement(0,
+		      G4ThreeVector(trackerPos_x6,trackerPos_y6,trackerPos_z6),
+		      logicCladding6 ,
+		      "cladding6",
+		      logicSensitiveVol,
+		      false,
+		      0);
+
+
+  
+//   //------------------------------------------------ 
+//   // Sensitive detectors
+//   //------------------------------------------------ 
+
+
+   G4SDManager* SDman = G4SDManager::GetSDMpointer();
+   GeDetTrackerSD * aTrackerSD = new GeDetTrackerSD ("GeDetTrackerSD");
+   SDman->AddNewDetector( aTrackerSD );		
+
+ 
+ logicTracker1->SetSensitiveDetector( aTrackerSD );
+ logicTracker2->SetSensitiveDetector( aTrackerSD );
+ logicTracker3->SetSensitiveDetector( aTrackerSD );
+ logicTracker4->SetSensitiveDetector( aTrackerSD );
+ logicTracker5->SetSensitiveDetector( aTrackerSD );
+ logicTracker6->SetSensitiveDetector( aTrackerSD );
+
+ logicFrontSi->SetSensitiveDetector( aTrackerSD ); 
+ logicBackSi->SetSensitiveDetector( aTrackerSD );
+
+
+
+  //--------- Visualization attributes -------------------------------
+  
+  G4VisAttributes* Boxcol= new G4VisAttributes(G4Colour(1.0,1.0,1.0));
+  logicWorld  ->SetVisAttributes(Boxcol); 
+
+   G4VisAttributes* outerCaseVisAtt = new G4VisAttributes(G4Colour(1.0,1.0,1.0));
+  outerCaseVisAtt->SetForceSolid(true);
+  outerCaseVisAtt->SetVisibility(true);
+  // logicOuterCase->SetVisAttributes(outerCaseVisAtt);
+  
+  
+  G4VisAttributes* windowVisAtt = new G4VisAttributes(G4Colour(0.5,1.0,1.0));
+  windowVisAtt->SetForceSolid(true);
+  windowVisAtt->SetVisibility(true);
+  
+  logicWindow->SetVisAttributes(windowVisAtt);
+
+//   G4VisAttributes* frontAirVisAtt = new G4VisAttributes(G4Colour(0.8,0.8,1.0));
+//   frontAirVisAtt->SetForceSolid(true);
+//   frontAirVisAtt->SetVisibility(true);
+  
+//   logicFrontAir->SetVisAttributes(frontAirVisAtt);
+
+ //  G4VisAttributes* backAirVisAtt = new G4VisAttributes(G4Colour(0.5,0.1,0.8));
+//  backAirVisAtt->SetForceSolid(true);
+//      backAirVisAtt->SetVisibility(true);
+  
+//   logicBackAir->SetVisAttributes(frontAirVisAtt);
+
+  
+  G4VisAttributes* SiVisAtt = new G4VisAttributes(G4Colour(1.0,1.0,1.0));
+  SiVisAtt->SetForceSolid(true);
+  SiVisAtt->SetVisibility(true);
+  
+  logicBackSi->SetVisAttributes(SiVisAtt);
+  logicFrontSi->SetVisAttributes(SiVisAtt);
+  
+  G4VisAttributes* tubeVisAtt = new G4VisAttributes(G4Colour(1.0,1.0,0.0));
+  tubeVisAtt->SetForceSolid(true);
+  tubeVisAtt->SetVisibility(true);
+
+      
+      logicTracker1->SetVisAttributes(tubeVisAtt);
+      logicTracker2->SetVisAttributes(tubeVisAtt);
+      logicTracker3->SetVisAttributes(tubeVisAtt);
+      logicTracker4->SetVisAttributes(tubeVisAtt);
+      logicTracker5->SetVisAttributes(tubeVisAtt);
+      logicTracker6->SetVisAttributes(tubeVisAtt);
+    
+  return physiWorld;
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void GeDetDetectorConstruction::setTargetMaterial(G4String materialName)
+{
+  // search the material by its name 
+  G4Material* pttoMaterial = G4Material::GetMaterial(materialName);  
+  if (pttoMaterial)
+    {TargetMater = pttoMaterial;
+      logicTarget->SetMaterial(pttoMaterial); 
+      G4cout << "\n----> The target is " << fTargetLength/cm << " cm of "
+             << materialName << G4endl;
+    }             
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void GeDetDetectorConstruction::setChamberMaterial(G4String materialName)
+{
+  // search the material by its name 
+  G4Material* pttoMaterial = G4Material::GetMaterial(materialName);  
+  if (pttoMaterial)
+    {ChamberMater = pttoMaterial;
+      logicChamber->SetMaterial(pttoMaterial); 
+      G4cout << "\n----> The chambers are " << ChamberWidth/cm << " cm of "
+             << materialName << G4endl;
+    }             
+}
+

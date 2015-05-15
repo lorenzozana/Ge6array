@@ -1,0 +1,113 @@
+//
+
+
+#ifndef GeDetDetectorConstruction_h
+#define GeDetDetectorConstruction_h 1
+
+#include "globals.hh"
+#include "G4VUserDetectorConstruction.hh"
+
+class G4Box;
+class G4LogicalVolume;
+class G4VPhysicalVolume;
+class G4Material;
+class GeDetDetectorMessenger;
+
+
+
+class GeDetDetectorConstruction : public G4VUserDetectorConstruction
+{
+  public:
+  
+     GeDetDetectorConstruction();
+    ~GeDetDetectorConstruction();
+
+  public:
+  
+     G4VPhysicalVolume* Construct();
+     
+     const G4VPhysicalVolume* GetTracker1() {return physiTracker1;};
+     G4double GetTrackerFullLength() {return fTrackerLength;};
+     G4double GetTargetFullLength()  {return fTargetLength;};
+     G4double GetWorldFullLength()   {return fWorldLength;}; 
+     
+     void setTargetMaterial (G4String);
+     void setChamberMaterial(G4String);
+     void SetMagField(G4double);
+     
+private:
+  
+  G4Box*             solidWorld;    // pointer to the solid envelope 
+  G4LogicalVolume*   logicWorld;    // pointer to the logical envelope
+  G4VPhysicalVolume* physiWorld;    // pointer to the physical envelope
+  
+  G4Box*             solidTarget;   // pointer to the solid Target
+  G4LogicalVolume*   logicTarget;   // pointer to the logical Target
+  G4VPhysicalVolume* physiTarget;   // pointer to the physical Target
+  
+  G4Box*             solidTracker;  // pointer to the solid Tracker
+
+  G4LogicalVolume*   logicDet1;  // pointer to the logical detector 1 
+  G4LogicalVolume*   logicSensitiveVol;
+  G4LogicalVolume* logicInnerCase;
+  G4LogicalVolume* logicOuterCase;
+  
+  G4LogicalVolume* logicFrontAir;
+ G4LogicalVolume* logicBackAir;
+
+ G4LogicalVolume*   logicWindow;  // pointer to the logical Window
+ G4LogicalVolume*   logicBackSi;  // pointer to the logical back DSSD
+ G4LogicalVolume*   logicFrontSi;  // pointer to the logical front DSSD
+ G4LogicalVolume*   logicTracker1;  // pointer to the logical Tracker
+ G4LogicalVolume*   logicTracker2;  // pointer to the logical Tracker
+  G4LogicalVolume*   logicTracker3;  // pointer to the logical Tracker
+ G4LogicalVolume*   logicTracker4;  // pointer to the logical Tracker
+ G4LogicalVolume*   logicTracker5;  // pointer to the logical Tracker
+  G4LogicalVolume*   logicTracker6;  // pointer to the logical Tracker
+
+ G4LogicalVolume*   logicCladding1;  // pointer to the logical cladding
+ G4LogicalVolume*   logicCladding2;  
+  G4LogicalVolume*   logicCladding3;  
+ G4LogicalVolume*   logicCladding4;  
+ G4LogicalVolume*   logicCladding5;  
+  G4LogicalVolume*   logicCladding6;
+
+  G4VPhysicalVolume* physiTracker1;  // pointer to the physical Tracker
+ G4VPhysicalVolume* physiTracker2;  // pointer to the physical Tracker
+ G4VPhysicalVolume* physiTracker3;  // pointer to the physical Tracker
+  G4VPhysicalVolume* physiTracker4;  // pointer to the physical Tracker
+ G4VPhysicalVolume* physiTracker5;  // pointer to the physical Tracker
+ G4VPhysicalVolume* physiTracker6;  // pointer to the physical Tracker
+ G4VPhysicalVolume*   physiWindow;  // pointer to the physical Window
+ G4VPhysicalVolume*   physiBackSi;  // pointer to the physical back DSSD
+ G4VPhysicalVolume*   physiFrontSi;  // pointer to the physical front DSSD
+
+ G4VPhysicalVolume*   physiDet1;  // pointer to the physical detector 1 
+  G4VPhysicalVolume*   physiSensitiveVol;
+  G4VPhysicalVolume*   physiInnerCase;
+  G4VPhysicalVolume*   physiOuterCase;
+
+  G4VPhysicalVolume* physiFrontAir;
+  G4VPhysicalVolume* physiBackAir;
+
+     G4Box*             solidChamber;  // pointer to the solid Chamber
+     G4LogicalVolume*   logicChamber;  // pointer to the logical Chamber
+     G4VPhysicalVolume* physiChamber;  // pointer to the physical Chamber
+     
+     G4Material*         TargetMater;  // pointer to the target  material
+     G4Material*         ChamberMater; // pointer to the chamber material     
+  
+     
+  GeDetDetectorMessenger* detectorMessenger;  // pointer to the Messenger
+  
+  G4double fWorldLength;            // Full length of the world volume
+  G4double fTargetLength;           // Full length of Target
+  G4double fTrackerLength;          // Full length of Tracker
+  G4int    NbOfChambers;            // Nb of chambers in the tracker region
+  G4double ChamberWidth;            // width of the chambers
+  G4double ChamberSpacing;	       // distance between chambers
+};
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+#endif

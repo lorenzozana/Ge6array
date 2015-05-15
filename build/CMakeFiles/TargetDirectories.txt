@@ -1,0 +1,1 @@
+/Disk/ds-sopa-group/np/zana/Geant4/Ge6array/build/CMakeFiles/GeDetector.dir

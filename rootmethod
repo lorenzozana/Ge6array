@@ -1,0 +1,18 @@
+;; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+*** Interpreter error recovered ***
+root [3] MuGe->Draw("edep7+edep8:edep1+edep2>>histtemp1");
+root [4] TH2F *h2 = (TH2F *)gDirectory->Get("histtemp1")
+root [5] c2 = new TCanvas("c2")
+(class TCanvas*)0xa4a5990
+root [6] h2->Draw()
+root [7] h2->Draw("colz")
+root [8] h2->Draw("surf2")
+root [9] h2->Draw()
+root [10] h2->Draw("surf2")
+root [11] h2->Draw("surf4")
+root [12] MuGe->Draw("edep7+edep8:edep1+edep2+edep3");
+root [13] MuGe->Draw("edep7+edep8:edep1+edep2+edep3+edep4");
+root [14]
